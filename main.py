@@ -274,8 +274,8 @@ def create_bar_chart(df, y_variable, x_variable='Service name'):
 #--------------------------------------------------------------
 
 #POP FORECASTS
-pop_proj_path_utla = r'build_data\pop_projections\pop_forecast_24_to_43.csv'
-pop_proj_path_district = r'build_data\pop_projections\district_pop_forecast_24_to_43.csv'
+pop_proj_path_utla = r'build_data/pop_projections/pop_forecast_24_to_43.csv'
+pop_proj_path_district = r'build_data/pop_projections/district_pop_forecast_24_to_43.csv'
 
 #--------------------------------------------------------------
 #Make dataframes
