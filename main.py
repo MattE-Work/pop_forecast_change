@@ -440,7 +440,7 @@ elif use_case == 'For many services (requires file upload)':
 
     if users_file == None:
         #users_file = 'zTestData\\dummy_data_service_age_coverage.csv'
-        users_file = 'zTestData\\dummy_data_service_age_coverage_with_WTE.csv'
+        users_file = r'zTestData/dummy_data_service_age_coverage_with_WTE.csv'
         st.write('Test/dummy data in use as no file selected')
     
     service_df = pd.read_csv(users_file)
