@@ -1,0 +1,6 @@
+﻿Service name,min age seen,max age seen,gender seen,attendances in 12 months,average cost per appt,clinical_wte,Amber Valley,Bolsover,Chesterfield,Derbyshire Dales,Erewash,High Peak,North East Derbyshire,South Derbyshire,Derby
+Service A,15,75,Persons,20000,100,25.5,yes,yes,yes,yes,yes,yes,yes,yes,yes
+Service B,0,5,Persons,15000,150,14,yes,yes,yes,no,yes,yes,yes,yes,no
+Service C,18,65,Persons,37000,95,17.2,no,yes,yes,no,no,yes,yes,no,no
+Service D,18,45,Female,8000,205,10,no,no,no,no,no,no,no,no,yes
+Service E,18,65,Male,12500,300,14,yes,no,no,yes,yes,no,no,yes,yes
