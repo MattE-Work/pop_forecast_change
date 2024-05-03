@@ -1,0 +1,652 @@
+﻿LSOA21CD,LSOA21NM,LAD23CD,LAD23NM,ObjectId,utla_name
+E01013453,Derby 013A,E06000015,Derby,1236,Derby
+E01013454,Derby 013B,E06000015,Derby,1237,Derby
+E01013455,Derby 017A,E06000015,Derby,1238,Derby
+E01013456,Derby 013C,E06000015,Derby,1239,Derby
+E01013457,Derby 013D,E06000015,Derby,1240,Derby
+E01013458,Derby 017B,E06000015,Derby,1241,Derby
+E01013459,Derby 020A,E06000015,Derby,1242,Derby
+E01013460,Derby 013E,E06000015,Derby,1243,Derby
+E01013461,Derby 001A,E06000015,Derby,1244,Derby
+E01013462,Derby 001B,E06000015,Derby,1245,Derby
+E01013463,Derby 001C,E06000015,Derby,1246,Derby
+E01013464,Derby 001D,E06000015,Derby,1247,Derby
+E01013465,Derby 002A,E06000015,Derby,1248,Derby
+E01013466,Derby 002B,E06000015,Derby,1249,Derby
+E01013467,Derby 002C,E06000015,Derby,1250,Derby
+E01013468,Derby 002D,E06000015,Derby,1251,Derby
+E01013469,Derby 002E,E06000015,Derby,1327,Derby
+E01013470,Derby 024A,E06000015,Derby,1331,Derby
+E01013471,Derby 025A,E06000015,Derby,1335,Derby
+E01013472,Derby 026A,E06000015,Derby,1339,Derby
+E01013473,Derby 025B,E06000015,Derby,1343,Derby
+E01013474,Derby 024B,E06000015,Derby,1347,Derby
+E01013475,Derby 025C,E06000015,Derby,1400,Derby
+E01013476,Derby 024C,E06000015,Derby,1401,Derby
+E01013477,Derby 025D,E06000015,Derby,1402,Derby
+E01013480,Derby 016A,E06000015,Derby,1403,Derby
+E01013481,Derby 018A,E06000015,Derby,1404,Derby
+E01013483,Derby 016B,E06000015,Derby,1405,Derby
+E01013484,Derby 018C,E06000015,Derby,1406,Derby
+E01013485,Derby 016C,E06000015,Derby,1407,Derby
+E01013486,Derby 018D,E06000015,Derby,1408,Derby
+E01013487,Derby 018E,E06000015,Derby,1409,Derby
+E01013488,Derby 022A,E06000015,Derby,1410,Derby
+E01013489,Derby 022B,E06000015,Derby,1411,Derby
+E01013490,Derby 022C,E06000015,Derby,1412,Derby
+E01013491,Derby 022D,E06000015,Derby,1413,Derby
+E01013492,Derby 027A,E06000015,Derby,1414,Derby
+E01013493,Derby 027B,E06000015,Derby,1415,Derby
+E01013494,Derby 027C,E06000015,Derby,1416,Derby
+E01013495,Derby 027D,E06000015,Derby,1417,Derby
+E01013496,Derby 028A,E06000015,Derby,1418,Derby
+E01013497,Derby 026B,E06000015,Derby,1419,Derby
+E01013498,Derby 028B,E06000015,Derby,1420,Derby
+E01013499,Derby 028C,E06000015,Derby,1421,Derby
+E01013500,Derby 028D,E06000015,Derby,1422,Derby
+E01013501,Derby 028E,E06000015,Derby,1423,Derby
+E01013502,Derby 025E,E06000015,Derby,1424,Derby
+E01013503,Derby 025F,E06000015,Derby,1425,Derby
+E01013504,Derby 026C,E06000015,Derby,1426,Derby
+E01013505,Derby 006A,E06000015,Derby,1427,Derby
+E01013506,Derby 006B,E06000015,Derby,1428,Derby
+E01013507,Derby 012A,E06000015,Derby,1429,Derby
+E01013508,Derby 012B,E06000015,Derby,1430,Derby
+E01013509,Derby 012C,E06000015,Derby,1431,Derby
+E01013510,Derby 012D,E06000015,Derby,1432,Derby
+E01013511,Derby 012E,E06000015,Derby,1433,Derby
+E01013512,Derby 012F,E06000015,Derby,1434,Derby
+E01013513,Derby 006C,E06000015,Derby,1435,Derby
+E01013514,Derby 031A,E06000015,Derby,1436,Derby
+E01013515,Derby 031B,E06000015,Derby,1437,Derby
+E01013517,Derby 030B,E06000015,Derby,1455,Derby
+E01013518,Derby 030C,E06000015,Derby,1458,Derby
+E01013519,Derby 031C,E06000015,Derby,1462,Derby
+E01013520,Derby 031D,E06000015,Derby,1466,Derby
+E01013521,Derby 030D,E06000015,Derby,1470,Derby
+E01013522,Derby 008A,E06000015,Derby,1473,Derby
+E01013573,Derby 023D,E06000015,Derby,1621,Derby
+E01013523,Derby 008B,E06000015,Derby,1623,Derby
+E01013574,Derby 003A,E06000015,Derby,1627,Derby
+E01013575,Derby 003B,E06000015,Derby,1697,Derby
+E01013576,Derby 003C,E06000015,Derby,1699,Derby
+E01013577,Derby 003D,E06000015,Derby,1701,Derby
+E01013524,Derby 008C,E06000015,Derby,1702,Derby
+E01013578,Derby 003E,E06000015,Derby,1736,Derby
+E01013525,Derby 008D,E06000015,Derby,1738,Derby
+E01013579,Derby 003F,E06000015,Derby,1739,Derby
+E01013526,Derby 005A,E06000015,Derby,1742,Derby
+E01013580,Derby 003G,E06000015,Derby,1744,Derby
+E01013527,Derby 005B,E06000015,Derby,1747,Derby
+E01013581,Derby 004D,E06000015,Derby,1749,Derby
+E01013528,Derby 005C,E06000015,Derby,1751,Derby
+E01013582,Derby 006E,E06000015,Derby,1753,Derby
+E01013529,Derby 005D,E06000015,Derby,1755,Derby
+E01013583,Derby 026D,E06000015,Derby,1757,Derby
+E01013530,Derby 004A,E06000015,Derby,1759,Derby
+E01013584,Derby 029A,E06000015,Derby,1761,Derby
+E01013531,Derby 004B,E06000015,Derby,1763,Derby
+E01013532,Derby 004C,E06000015,Derby,1764,Derby
+E01013533,Derby 007A,E06000015,Derby,1765,Derby
+E01013534,Derby 006D,E06000015,Derby,1766,Derby
+E01013535,Derby 007B,E06000015,Derby,1767,Derby
+E01013536,Derby 007C,E06000015,Derby,1768,Derby
+E01013537,Derby 007D,E06000015,Derby,1769,Derby
+E01013538,Derby 007E,E06000015,Derby,1770,Derby
+E01013539,Derby 021A,E06000015,Derby,1771,Derby
+E01013540,Derby 019A,E06000015,Derby,1772,Derby
+E01013541,Derby 021B,E06000015,Derby,1773,Derby
+E01013542,Derby 017C,E06000015,Derby,1774,Derby
+E01013543,Derby 021C,E06000015,Derby,1775,Derby
+E01013544,Derby 021D,E06000015,Derby,1776,Derby
+E01013545,Derby 021E,E06000015,Derby,1777,Derby
+E01013546,Derby 017D,E06000015,Derby,1778,Derby
+E01013547,Derby 011A,E06000015,Derby,1779,Derby
+E01013548,Derby 009A,E06000015,Derby,1780,Derby
+E01013549,Derby 009B,E06000015,Derby,1781,Derby
+E01013550,Derby 011B,E06000015,Derby,1782,Derby
+E01013551,Derby 011C,E06000015,Derby,1783,Derby
+E01013552,Derby 009C,E06000015,Derby,1784,Derby
+E01013553,Derby 009D,E06000015,Derby,1785,Derby
+E01013554,Derby 011D,E06000015,Derby,1786,Derby
+E01013555,Derby 009E,E06000015,Derby,1787,Derby
+E01013556,Derby 015A,E06000015,Derby,1788,Derby
+E01013557,Derby 015B,E06000015,Derby,1789,Derby
+E01013558,Derby 015C,E06000015,Derby,1790,Derby
+E01013559,Derby 015D,E06000015,Derby,1791,Derby
+E01013560,Derby 019B,E06000015,Derby,1792,Derby
+E01013561,Derby 019C,E06000015,Derby,1793,Derby
+E01013562,Derby 019D,E06000015,Derby,1794,Derby
+E01013563,Derby 019E,E06000015,Derby,1795,Derby
+E01013564,Derby 015E,E06000015,Derby,1796,Derby
+E01013565,Derby 016D,E06000015,Derby,1797,Derby
+E01013566,Derby 016E,E06000015,Derby,1798,Derby
+E01013567,Derby 020B,E06000015,Derby,1799,Derby
+E01013568,Derby 020C,E06000015,Derby,1800,Derby
+E01013569,Derby 020D,E06000015,Derby,1801,Derby
+E01013570,Derby 023A,E06000015,Derby,1802,Derby
+E01013571,Derby 023B,E06000015,Derby,1803,Derby
+E01013572,Derby 023C,E06000015,Derby,1804,Derby
+E01013585,Derby 029B,E06000015,Derby,1806,Derby
+E01013586,Derby 029C,E06000015,Derby,1810,Derby
+E01013587,Derby 029D,E06000015,Derby,1814,Derby
+E01013588,Derby 029E,E06000015,Derby,1818,Derby
+E01013589,Derby 029F,E06000015,Derby,1822,Derby
+E01013590,Derby 026E,E06000015,Derby,1826,Derby
+E01013591,Derby 026F,E06000015,Derby,1830,Derby
+E01013592,Derby 010A,E06000015,Derby,1834,Derby
+E01013593,Derby 014A,E06000015,Derby,1900,Derby
+E01013594,Derby 010B,E06000015,Derby,1913,Derby
+E01013595,Derby 014B,E06000015,Derby,1915,Derby
+E01013596,Derby 010C,E06000015,Derby,1917,Derby
+E01013597,Derby 014C,E06000015,Derby,1919,Derby
+E01013598,Derby 014D,E06000015,Derby,1921,Derby
+E01013599,Derby 010D,E06000015,Derby,1923,Derby
+E01033166,Derby 018F,E06000015,Derby,1925,Derby
+E01033167,Derby 018G,E06000015,Derby,1927,Derby
+E01033168,Derby 030E,E06000015,Derby,1929,Derby
+E01033169,Derby 030F,E06000015,Derby,1931,Derby
+E01033170,Derby 030G,E06000015,Derby,1932,Derby
+E01033171,Derby 024E,E06000015,Derby,1933,Derby
+E01033172,Derby 024F,E06000015,Derby,1934,Derby
+E01034256,Derby 013G,E06000015,Derby,1935,Derby
+E01034257,Derby 013H,E06000015,Derby,1936,Derby
+E01019400,Amber Valley 001A,E07000032,Amber Valley,10061,Derbyshire
+E01019401,Amber Valley 001B,E07000032,Amber Valley,10062,Derbyshire
+E01019402,Amber Valley 001C,E07000032,Amber Valley,10063,Derbyshire
+E01019403,Amber Valley 003A,E07000032,Amber Valley,10064,Derbyshire
+E01019404,Amber Valley 001D,E07000032,Amber Valley,10065,Derbyshire
+E01019405,Amber Valley 007A,E07000032,Amber Valley,10066,Derbyshire
+E01019406,Amber Valley 002A,E07000032,Amber Valley,10067,Derbyshire
+E01019407,Amber Valley 010A,E07000032,Amber Valley,10068,Derbyshire
+E01019408,Amber Valley 009A,E07000032,Amber Valley,10069,Derbyshire
+E01019409,Amber Valley 009B,E07000032,Amber Valley,10070,Derbyshire
+E01019410,Amber Valley 011A,E07000032,Amber Valley,10071,Derbyshire
+E01019411,Amber Valley 011B,E07000032,Amber Valley,10072,Derbyshire
+E01019412,Amber Valley 009C,E07000032,Amber Valley,10073,Derbyshire
+E01019413,Amber Valley 009D,E07000032,Amber Valley,10074,Derbyshire
+E01019414,Amber Valley 007B,E07000032,Amber Valley,10075,Derbyshire
+E01019415,Amber Valley 010B,E07000032,Amber Valley,10076,Derbyshire
+E01019416,Amber Valley 009E,E07000032,Amber Valley,10077,Derbyshire
+E01019417,Amber Valley 010C,E07000032,Amber Valley,10078,Derbyshire
+E01019418,Amber Valley 011C,E07000032,Amber Valley,10079,Derbyshire
+E01019419,Amber Valley 010D,E07000032,Amber Valley,10080,Derbyshire
+E01019420,Amber Valley 005A,E07000032,Amber Valley,10081,Derbyshire
+E01019421,Amber Valley 008A,E07000032,Amber Valley,10082,Derbyshire
+E01019422,Amber Valley 008B,E07000032,Amber Valley,10083,Derbyshire
+E01019423,Amber Valley 002B,E07000032,Amber Valley,10084,Derbyshire
+E01019424,Amber Valley 002C,E07000032,Amber Valley,10085,Derbyshire
+E01019425,Amber Valley 016A,E07000032,Amber Valley,10086,Derbyshire
+E01019426,Amber Valley 016B,E07000032,Amber Valley,10087,Derbyshire
+E01019427,Amber Valley 016C,E07000032,Amber Valley,10088,Derbyshire
+E01019428,Amber Valley 007C,E07000032,Amber Valley,10089,Derbyshire
+E01019429,Amber Valley 006A,E07000032,Amber Valley,10090,Derbyshire
+E01019430,Amber Valley 007D,E07000032,Amber Valley,10091,Derbyshire
+E01019431,Amber Valley 012A,E07000032,Amber Valley,10092,Derbyshire
+E01019432,Amber Valley 008C,E07000032,Amber Valley,10093,Derbyshire
+E01019433,Amber Valley 012B,E07000032,Amber Valley,10094,Derbyshire
+E01019434,Amber Valley 013A,E07000032,Amber Valley,10095,Derbyshire
+E01019435,Amber Valley 013B,E07000032,Amber Valley,10096,Derbyshire
+E01019436,Amber Valley 013C,E07000032,Amber Valley,10097,Derbyshire
+E01019437,Amber Valley 017A,E07000032,Amber Valley,10098,Derbyshire
+E01019438,Amber Valley 012C,E07000032,Amber Valley,10099,Derbyshire
+E01019439,Amber Valley 013D,E07000032,Amber Valley,10100,Derbyshire
+E01019440,Amber Valley 013E,E07000032,Amber Valley,10101,Derbyshire
+E01019490,Bolsover 005D,E07000033,Bolsover,10104,Derbyshire
+E01019491,Bolsover 001C,E07000033,Bolsover,10105,Derbyshire
+E01019492,Bolsover 002A,E07000033,Bolsover,10106,Derbyshire
+E01019493,Bolsover 001D,E07000033,Bolsover,10107,Derbyshire
+E01019495,Bolsover 002B,E07000033,Bolsover,10108,Derbyshire
+E01019496,Bolsover 003A,E07000033,Bolsover,10109,Derbyshire
+E01019497,Bolsover 003B,E07000033,Bolsover,10110,Derbyshire
+E01019498,Bolsover 003C,E07000033,Bolsover,10111,Derbyshire
+E01019499,Bolsover 010A,E07000033,Bolsover,10112,Derbyshire
+E01019500,Bolsover 010B,E07000033,Bolsover,10113,Derbyshire
+E01019501,Bolsover 010C,E07000033,Bolsover,10114,Derbyshire
+E01019502,Bolsover 005E,E07000033,Bolsover,10115,Derbyshire
+E01019503,Bolsover 007A,E07000033,Bolsover,10116,Derbyshire
+E01019504,Bolsover 005F,E07000033,Bolsover,10117,Derbyshire
+E01019505,Bolsover 007B,E07000033,Bolsover,10118,Derbyshire
+E01019506,Bolsover 007C,E07000033,Bolsover,10119,Derbyshire
+E01019507,Bolsover 007D,E07000033,Bolsover,10120,Derbyshire
+E01019508,Bolsover 006A,E07000033,Bolsover,10121,Derbyshire
+E01019509,Bolsover 006B,E07000033,Bolsover,10122,Derbyshire
+E01019510,Bolsover 006C,E07000033,Bolsover,10123,Derbyshire
+E01019511,Bolsover 007E,E07000033,Bolsover,10124,Derbyshire
+E01019513,Bolsover 010D,E07000033,Bolsover,10125,Derbyshire
+E01019514,Bolsover 009B,E07000033,Bolsover,10126,Derbyshire
+E01019515,Bolsover 009C,E07000033,Bolsover,10127,Derbyshire
+E01019441,Amber Valley 017B,E07000032,Amber Valley,10129,Derbyshire
+E01019516,Bolsover 009D,E07000033,Bolsover,10131,Derbyshire
+E01019517,Bolsover 010E,E07000033,Bolsover,10132,Derbyshire
+E01019518,Bolsover 010F,E07000033,Bolsover,10133,Derbyshire
+E01019519,Bolsover 009E,E07000033,Bolsover,10134,Derbyshire
+E01019520,Bolsover 008C,E07000033,Bolsover,10135,Derbyshire
+E01019521,Bolsover 008D,E07000033,Bolsover,10136,Derbyshire
+E01019522,Bolsover 008E,E07000033,Bolsover,10137,Derbyshire
+E01019523,Bolsover 003D,E07000033,Bolsover,10138,Derbyshire
+E01019524,Bolsover 002C,E07000033,Bolsover,10139,Derbyshire
+E01019525,Bolsover 002D,E07000033,Bolsover,10140,Derbyshire
+E01034644,Bolsover 001F,E07000033,Bolsover,10141,Derbyshire
+E01034645,Bolsover 001G,E07000033,Bolsover,10142,Derbyshire
+E01034646,Bolsover 006E,E07000033,Bolsover,10143,Derbyshire
+E01034647,Bolsover 006F,E07000033,Bolsover,10144,Derbyshire
+E01019526,Chesterfield 001A,E07000034,Chesterfield,10145,Derbyshire
+E01019527,Chesterfield 003A,E07000034,Chesterfield,10146,Derbyshire
+E01019528,Chesterfield 001B,E07000034,Chesterfield,10147,Derbyshire
+E01019529,Chesterfield 003B,E07000034,Chesterfield,10148,Derbyshire
+E01019530,Chesterfield 003C,E07000034,Chesterfield,10149,Derbyshire
+E01019531,Chesterfield 003D,E07000034,Chesterfield,10150,Derbyshire
+E01019532,Chesterfield 005A,E07000034,Chesterfield,10151,Derbyshire
+E01019533,Chesterfield 005B,E07000034,Chesterfield,10152,Derbyshire
+E01019534,Chesterfield 005C,E07000034,Chesterfield,10153,Derbyshire
+E01019535,Chesterfield 005D,E07000034,Chesterfield,10154,Derbyshire
+E01019536,Chesterfield 005E,E07000034,Chesterfield,10155,Derbyshire
+E01019537,Chesterfield 007A,E07000034,Chesterfield,10156,Derbyshire
+E01019442,Amber Valley 005B,E07000032,Amber Valley,10253,Derbyshire
+E01019443,Amber Valley 004A,E07000032,Amber Valley,10306,Derbyshire
+E01019444,Amber Valley 003B,E07000032,Amber Valley,10354,Derbyshire
+E01019445,Amber Valley 005C,E07000032,Amber Valley,10355,Derbyshire
+E01019446,Amber Valley 015A,E07000032,Amber Valley,10356,Derbyshire
+E01019447,Amber Valley 011D,E07000032,Amber Valley,10357,Derbyshire
+E01019448,Amber Valley 015B,E07000032,Amber Valley,10358,Derbyshire
+E01019449,Amber Valley 011E,E07000032,Amber Valley,10359,Derbyshire
+E01019450,Amber Valley 015C,E07000032,Amber Valley,10360,Derbyshire
+E01019451,Amber Valley 012D,E07000032,Amber Valley,10361,Derbyshire
+E01019452,Amber Valley 017C,E07000032,Amber Valley,10362,Derbyshire
+E01019453,Amber Valley 017D,E07000032,Amber Valley,10363,Derbyshire
+E01019454,Amber Valley 006B,E07000032,Amber Valley,10364,Derbyshire
+E01019455,Amber Valley 005D,E07000032,Amber Valley,10365,Derbyshire
+E01019456,Amber Valley 005E,E07000032,Amber Valley,10366,Derbyshire
+E01019457,Amber Valley 005F,E07000032,Amber Valley,10367,Derbyshire
+E01019458,Amber Valley 008D,E07000032,Amber Valley,10368,Derbyshire
+E01019459,Amber Valley 008E,E07000032,Amber Valley,10369,Derbyshire
+E01019460,Amber Valley 006C,E07000032,Amber Valley,10370,Derbyshire
+E01019461,Amber Valley 006D,E07000032,Amber Valley,10371,Derbyshire
+E01019462,Amber Valley 006E,E07000032,Amber Valley,10372,Derbyshire
+E01019463,Amber Valley 008F,E07000032,Amber Valley,10373,Derbyshire
+E01019464,Amber Valley 012E,E07000032,Amber Valley,10374,Derbyshire
+E01019465,Amber Valley 015D,E07000032,Amber Valley,10375,Derbyshire
+E01019467,Amber Valley 015E,E07000032,Amber Valley,10376,Derbyshire
+E01019468,Amber Valley 003C,E07000032,Amber Valley,10377,Derbyshire
+E01019469,Amber Valley 003D,E07000032,Amber Valley,10378,Derbyshire
+E01019470,Amber Valley 004B,E07000032,Amber Valley,10379,Derbyshire
+E01019471,Amber Valley 003E,E07000032,Amber Valley,10380,Derbyshire
+E01019473,Amber Valley 004C,E07000032,Amber Valley,10381,Derbyshire
+E01019474,Amber Valley 004D,E07000032,Amber Valley,10382,Derbyshire
+E01019475,Amber Valley 004E,E07000032,Amber Valley,10383,Derbyshire
+E01019476,Amber Valley 004F,E07000032,Amber Valley,10384,Derbyshire
+E01019477,Amber Valley 002D,E07000032,Amber Valley,10385,Derbyshire
+E01032613,Amber Valley 017E,E07000032,Amber Valley,10386,Derbyshire
+E01034254,Amber Valley 016E,E07000032,Amber Valley,10387,Derbyshire
+E01034255,Amber Valley 016F,E07000032,Amber Valley,10388,Derbyshire
+E01019478,Bolsover 001A,E07000033,Bolsover,10389,Derbyshire
+E01019479,Bolsover 001B,E07000033,Bolsover,10390,Derbyshire
+E01019480,Bolsover 008A,E07000033,Bolsover,10391,Derbyshire
+E01019481,Bolsover 009A,E07000033,Bolsover,10392,Derbyshire
+E01019482,Bolsover 008B,E07000033,Bolsover,10393,Derbyshire
+E01019483,Bolsover 004A,E07000033,Bolsover,10394,Derbyshire
+E01019484,Bolsover 004B,E07000033,Bolsover,10395,Derbyshire
+E01019485,Bolsover 004C,E07000033,Bolsover,10396,Derbyshire
+E01019486,Bolsover 005A,E07000033,Bolsover,10397,Derbyshire
+E01019487,Bolsover 005B,E07000033,Bolsover,10398,Derbyshire
+E01019488,Bolsover 004D,E07000033,Bolsover,10399,Derbyshire
+E01019489,Bolsover 005C,E07000033,Bolsover,10400,Derbyshire
+E01019788,North East Derbyshire 005C,E07000038,North East Derbyshire,10401,Derbyshire
+E01019790,North East Derbyshire 002C,E07000038,North East Derbyshire,10402,Derbyshire
+E01019791,North East Derbyshire 014A,E07000038,North East Derbyshire,10403,Derbyshire
+E01019792,North East Derbyshire 014B,E07000038,North East Derbyshire,10404,Derbyshire
+E01019793,North East Derbyshire 006D,E07000038,North East Derbyshire,10405,Derbyshire
+E01019794,North East Derbyshire 005D,E07000038,North East Derbyshire,10406,Derbyshire
+E01019795,North East Derbyshire 006E,E07000038,North East Derbyshire,10407,Derbyshire
+E01019796,North East Derbyshire 009A,E07000038,North East Derbyshire,10408,Derbyshire
+E01019797,North East Derbyshire 009B,E07000038,North East Derbyshire,10409,Derbyshire
+E01019798,North East Derbyshire 007A,E07000038,North East Derbyshire,10410,Derbyshire
+E01019799,North East Derbyshire 009C,E07000038,North East Derbyshire,10411,Derbyshire
+E01019800,North East Derbyshire 009D,E07000038,North East Derbyshire,10412,Derbyshire
+E01019801,North East Derbyshire 001A,E07000038,North East Derbyshire,10413,Derbyshire
+E01019802,North East Derbyshire 001B,E07000038,North East Derbyshire,10414,Derbyshire
+E01019803,North East Derbyshire 001C,E07000038,North East Derbyshire,10415,Derbyshire
+E01019804,North East Derbyshire 001D,E07000038,North East Derbyshire,10416,Derbyshire
+E01019805,North East Derbyshire 001E,E07000038,North East Derbyshire,10417,Derbyshire
+E01019806,North East Derbyshire 001F,E07000038,North East Derbyshire,10418,Derbyshire
+E01019807,North East Derbyshire 001G,E07000038,North East Derbyshire,10419,Derbyshire
+E01019808,North East Derbyshire 009E,E07000038,North East Derbyshire,10420,Derbyshire
+E01019809,North East Derbyshire 011A,E07000038,North East Derbyshire,10421,Derbyshire
+E01019810,North East Derbyshire 011B,E07000038,North East Derbyshire,10422,Derbyshire
+E01019811,North East Derbyshire 011C,E07000038,North East Derbyshire,10423,Derbyshire
+E01019812,North East Derbyshire 011D,E07000038,North East Derbyshire,10424,Derbyshire
+E01019813,North East Derbyshire 011E,E07000038,North East Derbyshire,10425,Derbyshire
+E01019814,North East Derbyshire 013A,E07000038,North East Derbyshire,10426,Derbyshire
+E01019815,North East Derbyshire 014C,E07000038,North East Derbyshire,10427,Derbyshire
+E01019816,North East Derbyshire 002D,E07000038,North East Derbyshire,10428,Derbyshire
+E01019817,North East Derbyshire 013B,E07000038,North East Derbyshire,10429,Derbyshire
+E01019818,North East Derbyshire 013C,E07000038,North East Derbyshire,10430,Derbyshire
+E01019819,North East Derbyshire 013D,E07000038,North East Derbyshire,10431,Derbyshire
+E01019820,North East Derbyshire 013E,E07000038,North East Derbyshire,10432,Derbyshire
+E01019821,North East Derbyshire 007B,E07000038,North East Derbyshire,10433,Derbyshire
+E01019822,North East Derbyshire 007C,E07000038,North East Derbyshire,10434,Derbyshire
+E01019823,North East Derbyshire 007D,E07000038,North East Derbyshire,10435,Derbyshire
+E01019824,North East Derbyshire 010C,E07000038,North East Derbyshire,10436,Derbyshire
+E01019825,North East Derbyshire 011F,E07000038,North East Derbyshire,10437,Derbyshire
+E01019826,North East Derbyshire 009F,E07000038,North East Derbyshire,10438,Derbyshire
+E01019827,North East Derbyshire 004E,E07000038,North East Derbyshire,10439,Derbyshire
+E01019828,North East Derbyshire 008C,E07000038,North East Derbyshire,10440,Derbyshire
+E01019829,North East Derbyshire 008D,E07000038,North East Derbyshire,10441,Derbyshire
+E01019830,North East Derbyshire 010D,E07000038,North East Derbyshire,10442,Derbyshire
+E01019831,North East Derbyshire 010E,E07000038,North East Derbyshire,10443,Derbyshire
+E01032586,North East Derbyshire 014D,E07000038,North East Derbyshire,10444,Derbyshire
+E01034648,North East Derbyshire 012E,E07000038,North East Derbyshire,10445,Derbyshire
+E01034649,North East Derbyshire 012F,E07000038,North East Derbyshire,10446,Derbyshire
+E01019832,South Derbyshire 004A,E07000039,South Derbyshire,10447,Derbyshire
+E01019833,South Derbyshire 004B,E07000039,South Derbyshire,10448,Derbyshire
+E01019834,South Derbyshire 004C,E07000039,South Derbyshire,10449,Derbyshire
+E01019837,South Derbyshire 012A,E07000039,South Derbyshire,10450,Derbyshire
+E01019589,Chesterfield 011D,E07000034,Chesterfield,10451,Derbyshire
+E01034650,South Derbyshire 003F,E07000039,South Derbyshire,10452,Derbyshire
+E01034651,South Derbyshire 003G,E07000039,South Derbyshire,10453,Derbyshire
+E01034652,South Derbyshire 004E,E07000039,South Derbyshire,10454,Derbyshire
+E01034653,South Derbyshire 004F,E07000039,South Derbyshire,10455,Derbyshire
+E01034654,South Derbyshire 012F,E07000039,South Derbyshire,10456,Derbyshire
+E01034655,South Derbyshire 012G,E07000039,South Derbyshire,10457,Derbyshire
+E01034656,South Derbyshire 013E,E07000039,South Derbyshire,10458,Derbyshire
+E01034657,South Derbyshire 013F,E07000039,South Derbyshire,10459,Derbyshire
+E01019688,Erewash 006D,E07000036,Erewash,10502,Derbyshire
+E01019590,Chesterfield 009D,E07000034,Chesterfield,10503,Derbyshire
+E01019538,Chesterfield 010A,E07000034,Chesterfield,10504,Derbyshire
+E01019838,South Derbyshire 012B,E07000039,South Derbyshire,10505,Derbyshire
+E01019638,Erewash 016A,E07000036,Erewash,10506,Derbyshire
+E01019689,Erewash 006E,E07000036,Erewash,10507,Derbyshire
+E01019690,Erewash 003F,E07000036,Erewash,10508,Derbyshire
+E01019691,Erewash 008B,E07000036,Erewash,10509,Derbyshire
+E01019692,Erewash 008C,E07000036,Erewash,10510,Derbyshire
+E01019693,Erewash 008D,E07000036,Erewash,10511,Derbyshire
+E01019694,Erewash 008E,E07000036,Erewash,10512,Derbyshire
+E01019695,Erewash 010E,E07000036,Erewash,10513,Derbyshire
+E01019696,Erewash 008F,E07000036,Erewash,10514,Derbyshire
+E01019697,Erewash 015A,E07000036,Erewash,10515,Derbyshire
+E01019698,Erewash 014F,E07000036,Erewash,10516,Derbyshire
+E01019699,Erewash 015B,E07000036,Erewash,10517,Derbyshire
+E01019700,Erewash 015C,E07000036,Erewash,10518,Derbyshire
+E01019701,Erewash 004C,E07000036,Erewash,10519,Derbyshire
+E01019702,Erewash 005B,E07000036,Erewash,10520,Derbyshire
+E01019703,Erewash 005C,E07000036,Erewash,10521,Derbyshire
+E01019704,Erewash 005D,E07000036,Erewash,10522,Derbyshire
+E01019705,Erewash 015D,E07000036,Erewash,10523,Derbyshire
+E01019706,Erewash 015E,E07000036,Erewash,10524,Derbyshire
+E01019707,Erewash 011D,E07000036,Erewash,10525,Derbyshire
+E01019708,Erewash 011E,E07000036,Erewash,10526,Derbyshire
+E01019709,Erewash 015F,E07000036,Erewash,10527,Derbyshire
+E01032614,Erewash 016E,E07000036,Erewash,10528,Derbyshire
+E01019710,High Peak 010A,E07000037,High Peak,10529,Derbyshire
+E01019711,High Peak 006A,E07000037,High Peak,10530,Derbyshire
+E01019712,High Peak 008A,E07000037,High Peak,10531,Derbyshire
+E01019713,High Peak 008B,E07000037,High Peak,10532,Derbyshire
+E01019714,High Peak 012A,E07000037,High Peak,10533,Derbyshire
+E01019715,High Peak 010B,E07000037,High Peak,10534,Derbyshire
+E01019716,High Peak 011A,E07000037,High Peak,10535,Derbyshire
+E01019717,High Peak 010C,E07000037,High Peak,10536,Derbyshire
+E01019718,High Peak 013E,E07000037,High Peak,10537,Derbyshire
+E01019719,High Peak 013F,E07000037,High Peak,10538,Derbyshire
+E01019737,High Peak 013C,E07000037,High Peak,10539,Derbyshire
+E01019720,High Peak 013G,E07000037,High Peak,10540,Derbyshire
+E01019721,High Peak 013H,E07000037,High Peak,10541,Derbyshire
+E01019722,High Peak 010D,E07000037,High Peak,10542,Derbyshire
+E01019723,High Peak 010E,E07000037,High Peak,10543,Derbyshire
+E01019724,High Peak 011B,E07000037,High Peak,10544,Derbyshire
+E01019725,High Peak 012B,E07000037,High Peak,10545,Derbyshire
+E01019726,High Peak 012C,E07000037,High Peak,10546,Derbyshire
+E01019727,High Peak 004A,E07000037,High Peak,10547,Derbyshire
+E01019728,High Peak 002A,E07000037,High Peak,10548,Derbyshire
+E01019729,High Peak 002B,E07000037,High Peak,10549,Derbyshire
+E01019730,High Peak 002C,E07000037,High Peak,10550,Derbyshire
+E01019731,High Peak 002D,E07000037,High Peak,10551,Derbyshire
+E01019732,High Peak 002E,E07000037,High Peak,10552,Derbyshire
+E01019733,High Peak 001A,E07000037,High Peak,10553,Derbyshire
+E01019734,High Peak 006B,E07000037,High Peak,10554,Derbyshire
+E01019735,High Peak 013A,E07000037,High Peak,10555,Derbyshire
+E01019736,High Peak 013B,E07000037,High Peak,10556,Derbyshire
+E01019591,Chesterfield 009E,E07000034,Chesterfield,10557,Derbyshire
+E01019639,Erewash 016B,E07000036,Erewash,10558,Derbyshire
+E01019839,South Derbyshire 001A,E07000039,South Derbyshire,10559,Derbyshire
+E01019539,Chesterfield 009A,E07000034,Chesterfield,10560,Derbyshire
+E01019640,Erewash 016C,E07000036,Erewash,10561,Derbyshire
+E01019641,Erewash 011A,E07000036,Erewash,10562,Derbyshire
+E01019642,Erewash 013A,E07000036,Erewash,10563,Derbyshire
+E01019643,Erewash 013B,E07000036,Erewash,10564,Derbyshire
+E01019644,Erewash 001A,E07000036,Erewash,10565,Derbyshire
+E01019645,Erewash 016D,E07000036,Erewash,10566,Derbyshire
+E01019646,Erewash 001B,E07000036,Erewash,10567,Derbyshire
+E01019647,Erewash 012A,E07000036,Erewash,10568,Derbyshire
+E01019648,Erewash 010A,E07000036,Erewash,10569,Derbyshire
+E01019649,Erewash 010B,E07000036,Erewash,10570,Derbyshire
+E01019650,Erewash 010C,E07000036,Erewash,10571,Derbyshire
+E01019651,Erewash 010D,E07000036,Erewash,10572,Derbyshire
+E01019652,Erewash 011B,E07000036,Erewash,10573,Derbyshire
+E01019653,Erewash 011C,E07000036,Erewash,10574,Derbyshire
+E01019654,Erewash 013C,E07000036,Erewash,10575,Derbyshire
+E01019655,Erewash 013D,E07000036,Erewash,10576,Derbyshire
+E01019656,Erewash 008A,E07000036,Erewash,10577,Derbyshire
+E01019657,Erewash 003A,E07000036,Erewash,10578,Derbyshire
+E01019658,Erewash 006A,E07000036,Erewash,10579,Derbyshire
+E01019659,Erewash 006B,E07000036,Erewash,10580,Derbyshire
+E01019660,Erewash 003B,E07000036,Erewash,10581,Derbyshire
+E01019661,Erewash 003C,E07000036,Erewash,10582,Derbyshire
+E01019662,Erewash 003D,E07000036,Erewash,10583,Derbyshire
+E01019663,Erewash 001C,E07000036,Erewash,10584,Derbyshire
+E01019664,Erewash 001D,E07000036,Erewash,10585,Derbyshire
+E01019665,Erewash 001E,E07000036,Erewash,10586,Derbyshire
+E01019666,Erewash 007A,E07000036,Erewash,10587,Derbyshire
+E01019667,Erewash 007B,E07000036,Erewash,10588,Derbyshire
+E01019668,Erewash 007C,E07000036,Erewash,10589,Derbyshire
+E01019669,Erewash 007D,E07000036,Erewash,10590,Derbyshire
+E01019670,Erewash 004A,E07000036,Erewash,10591,Derbyshire
+E01019671,Erewash 004B,E07000036,Erewash,10592,Derbyshire
+E01019672,Erewash 003E,E07000036,Erewash,10593,Derbyshire
+E01019673,Erewash 005A,E07000036,Erewash,10594,Derbyshire
+E01019674,Erewash 006C,E07000036,Erewash,10595,Derbyshire
+E01019675,Erewash 012B,E07000036,Erewash,10596,Derbyshire
+E01019676,Erewash 014A,E07000036,Erewash,10597,Derbyshire
+E01019677,Erewash 014B,E07000036,Erewash,10598,Derbyshire
+E01019678,Erewash 014C,E07000036,Erewash,10599,Derbyshire
+E01019679,Erewash 012C,E07000036,Erewash,10600,Derbyshire
+E01019680,Erewash 014D,E07000036,Erewash,10601,Derbyshire
+E01019681,Erewash 014E,E07000036,Erewash,10602,Derbyshire
+E01019682,Erewash 012D,E07000036,Erewash,10603,Derbyshire
+E01019683,Erewash 009A,E07000036,Erewash,10604,Derbyshire
+E01019684,Erewash 009B,E07000036,Erewash,10605,Derbyshire
+E01019685,Erewash 009C,E07000036,Erewash,10606,Derbyshire
+E01019686,Erewash 009D,E07000036,Erewash,10607,Derbyshire
+E01019687,Erewash 009E,E07000036,Erewash,10608,Derbyshire
+E01019840,South Derbyshire 002A,E07000039,South Derbyshire,10609,Derbyshire
+E01019841,South Derbyshire 002B,E07000039,South Derbyshire,10610,Derbyshire
+E01019842,South Derbyshire 013A,E07000039,South Derbyshire,10611,Derbyshire
+E01019843,South Derbyshire 006A,E07000039,South Derbyshire,10612,Derbyshire
+E01019844,South Derbyshire 007A,E07000039,South Derbyshire,10613,Derbyshire
+E01019845,South Derbyshire 001B,E07000039,South Derbyshire,10614,Derbyshire
+E01019846,South Derbyshire 001C,E07000039,South Derbyshire,10615,Derbyshire
+E01019847,South Derbyshire 002C,E07000039,South Derbyshire,10616,Derbyshire
+E01019848,South Derbyshire 002D,E07000039,South Derbyshire,10617,Derbyshire
+E01019850,South Derbyshire 011A,E07000039,South Derbyshire,10618,Derbyshire
+E01019851,South Derbyshire 011B,E07000039,South Derbyshire,10619,Derbyshire
+E01019852,South Derbyshire 011C,E07000039,South Derbyshire,10620,Derbyshire
+E01019853,South Derbyshire 006B,E07000039,South Derbyshire,10621,Derbyshire
+E01019854,South Derbyshire 006C,E07000039,South Derbyshire,10622,Derbyshire
+E01019855,South Derbyshire 006D,E07000039,South Derbyshire,10623,Derbyshire
+E01019856,South Derbyshire 007B,E07000039,South Derbyshire,10624,Derbyshire
+E01019857,South Derbyshire 007C,E07000039,South Derbyshire,10625,Derbyshire
+E01019858,South Derbyshire 007D,E07000039,South Derbyshire,10626,Derbyshire
+E01019859,South Derbyshire 007E,E07000039,South Derbyshire,10627,Derbyshire
+E01019860,South Derbyshire 008A,E07000039,South Derbyshire,10628,Derbyshire
+E01019861,South Derbyshire 008B,E07000039,South Derbyshire,10629,Derbyshire
+E01019862,South Derbyshire 008C,E07000039,South Derbyshire,10630,Derbyshire
+E01019863,South Derbyshire 008D,E07000039,South Derbyshire,10631,Derbyshire
+E01019864,South Derbyshire 008E,E07000039,South Derbyshire,10632,Derbyshire
+E01019865,South Derbyshire 008F,E07000039,South Derbyshire,10633,Derbyshire
+E01019866,South Derbyshire 001D,E07000039,South Derbyshire,10634,Derbyshire
+E01019867,South Derbyshire 005A,E07000039,South Derbyshire,10635,Derbyshire
+E01019868,South Derbyshire 005B,E07000039,South Derbyshire,10636,Derbyshire
+E01019869,South Derbyshire 005C,E07000039,South Derbyshire,10637,Derbyshire
+E01019870,South Derbyshire 011D,E07000039,South Derbyshire,10638,Derbyshire
+E01019871,South Derbyshire 011E,E07000039,South Derbyshire,10639,Derbyshire
+E01019872,South Derbyshire 011F,E07000039,South Derbyshire,10640,Derbyshire
+E01019873,South Derbyshire 003A,E07000039,South Derbyshire,10641,Derbyshire
+E01019874,South Derbyshire 003B,E07000039,South Derbyshire,10642,Derbyshire
+E01019875,South Derbyshire 003C,E07000039,South Derbyshire,10643,Derbyshire
+E01019876,South Derbyshire 009A,E07000039,South Derbyshire,10644,Derbyshire
+E01019877,South Derbyshire 009B,E07000039,South Derbyshire,10645,Derbyshire
+E01019878,South Derbyshire 009C,E07000039,South Derbyshire,10646,Derbyshire
+E01019879,South Derbyshire 009D,E07000039,South Derbyshire,10647,Derbyshire
+E01019880,South Derbyshire 005D,E07000039,South Derbyshire,10648,Derbyshire
+E01019882,South Derbyshire 003E,E07000039,South Derbyshire,10649,Derbyshire
+E01019885,South Derbyshire 013C,E07000039,South Derbyshire,10650,Derbyshire
+E01033532,South Derbyshire 002F,E07000039,South Derbyshire,10651,Derbyshire
+E01033533,South Derbyshire 002G,E07000039,South Derbyshire,10652,Derbyshire
+E01033534,South Derbyshire 002H,E07000039,South Derbyshire,10653,Derbyshire
+E01033535,South Derbyshire 013D,E07000039,South Derbyshire,10654,Derbyshire
+E01033536,South Derbyshire 012D,E07000039,South Derbyshire,10655,Derbyshire
+E01033537,South Derbyshire 012E,E07000039,South Derbyshire,10656,Derbyshire
+E01019540,Chesterfield 009B,E07000034,Chesterfield,10657,Derbyshire
+E01019592,Chesterfield 011E,E07000034,Chesterfield,10658,Derbyshire
+E01019738,High Peak 003A,E07000037,High Peak,10659,Derbyshire
+E01019739,High Peak 003B,E07000037,High Peak,10660,Derbyshire
+E01019740,High Peak 003C,E07000037,High Peak,10661,Derbyshire
+E01019741,High Peak 013I,E07000037,High Peak,10662,Derbyshire
+E01019742,High Peak 013D,E07000037,High Peak,10663,Derbyshire
+E01019743,High Peak 006C,E07000037,High Peak,10664,Derbyshire
+E01019744,High Peak 006D,E07000037,High Peak,10665,Derbyshire
+E01019745,High Peak 006E,E07000037,High Peak,10666,Derbyshire
+E01019746,High Peak 005A,E07000037,High Peak,10667,Derbyshire
+E01019747,High Peak 005B,E07000037,High Peak,10668,Derbyshire
+E01019748,High Peak 005C,E07000037,High Peak,10669,Derbyshire
+E01019749,High Peak 004B,E07000037,High Peak,10670,Derbyshire
+E01019750,High Peak 003D,E07000037,High Peak,10671,Derbyshire
+E01019751,High Peak 003E,E07000037,High Peak,10672,Derbyshire
+E01019752,High Peak 001B,E07000037,High Peak,10673,Derbyshire
+E01019753,High Peak 001C,E07000037,High Peak,10674,Derbyshire
+E01019754,High Peak 004C,E07000037,High Peak,10675,Derbyshire
+E01019755,High Peak 005D,E07000037,High Peak,10676,Derbyshire
+E01019756,High Peak 004D,E07000037,High Peak,10677,Derbyshire
+E01019757,High Peak 004E,E07000037,High Peak,10678,Derbyshire
+E01019758,High Peak 004F,E07000037,High Peak,10679,Derbyshire
+E01019759,High Peak 011C,E07000037,High Peak,10680,Derbyshire
+E01019760,High Peak 011D,E07000037,High Peak,10681,Derbyshire
+E01019761,High Peak 011E,E07000037,High Peak,10682,Derbyshire
+E01019762,High Peak 012D,E07000037,High Peak,10683,Derbyshire
+E01019763,High Peak 001D,E07000037,High Peak,10684,Derbyshire
+E01019764,High Peak 008C,E07000037,High Peak,10685,Derbyshire
+E01019765,High Peak 008D,E07000037,High Peak,10686,Derbyshire
+E01019766,High Peak 005E,E07000037,High Peak,10687,Derbyshire
+E01019767,High Peak 008E,E07000037,High Peak,10688,Derbyshire
+E01019768,High Peak 003F,E07000037,High Peak,10689,Derbyshire
+E01019769,North East Derbyshire 010A,E07000038,North East Derbyshire,10690,Derbyshire
+E01019770,North East Derbyshire 005A,E07000038,North East Derbyshire,10691,Derbyshire
+E01019771,North East Derbyshire 008A,E07000038,North East Derbyshire,10692,Derbyshire
+E01019772,North East Derbyshire 008B,E07000038,North East Derbyshire,10693,Derbyshire
+E01019774,North East Derbyshire 010B,E07000038,North East Derbyshire,10694,Derbyshire
+E01019775,North East Derbyshire 012B,E07000038,North East Derbyshire,10695,Derbyshire
+E01019776,North East Derbyshire 012C,E07000038,North East Derbyshire,10696,Derbyshire
+E01019777,North East Derbyshire 012D,E07000038,North East Derbyshire,10697,Derbyshire
+E01019778,North East Derbyshire 002A,E07000038,North East Derbyshire,10698,Derbyshire
+E01019779,North East Derbyshire 002B,E07000038,North East Derbyshire,10699,Derbyshire
+E01019780,North East Derbyshire 004A,E07000038,North East Derbyshire,10700,Derbyshire
+E01019781,North East Derbyshire 004B,E07000038,North East Derbyshire,10701,Derbyshire
+E01019782,North East Derbyshire 004C,E07000038,North East Derbyshire,10702,Derbyshire
+E01019783,North East Derbyshire 006A,E07000038,North East Derbyshire,10703,Derbyshire
+E01019784,North East Derbyshire 006B,E07000038,North East Derbyshire,10704,Derbyshire
+E01019785,North East Derbyshire 006C,E07000038,North East Derbyshire,10705,Derbyshire
+E01019786,North East Derbyshire 004D,E07000038,North East Derbyshire,10706,Derbyshire
+E01019787,North East Derbyshire 005B,E07000038,North East Derbyshire,10707,Derbyshire
+E01019593,Chesterfield 011F,E07000034,Chesterfield,10708,Derbyshire
+E01019541,Chesterfield 004A,E07000034,Chesterfield,10709,Derbyshire
+E01019542,Chesterfield 004B,E07000034,Chesterfield,10710,Derbyshire
+E01019543,Chesterfield 004C,E07000034,Chesterfield,10711,Derbyshire
+E01019544,Chesterfield 004D,E07000034,Chesterfield,10712,Derbyshire
+E01019545,Chesterfield 012A,E07000034,Chesterfield,10713,Derbyshire
+E01019546,Chesterfield 012B,E07000034,Chesterfield,10714,Derbyshire
+E01019547,Chesterfield 012C,E07000034,Chesterfield,10715,Derbyshire
+E01019548,Chesterfield 012D,E07000034,Chesterfield,10716,Derbyshire
+E01019549,Chesterfield 006A,E07000034,Chesterfield,10717,Derbyshire
+E01019550,Chesterfield 006B,E07000034,Chesterfield,10718,Derbyshire
+E01019551,Chesterfield 006C,E07000034,Chesterfield,10719,Derbyshire
+E01019552,Chesterfield 006D,E07000034,Chesterfield,10720,Derbyshire
+E01019553,Chesterfield 003E,E07000034,Chesterfield,10721,Derbyshire
+E01019554,Chesterfield 010B,E07000034,Chesterfield,10722,Derbyshire
+E01019555,Chesterfield 009C,E07000034,Chesterfield,10723,Derbyshire
+E01019556,Chesterfield 010C,E07000034,Chesterfield,10724,Derbyshire
+E01019557,Chesterfield 008A,E07000034,Chesterfield,10725,Derbyshire
+E01019558,Chesterfield 008B,E07000034,Chesterfield,10726,Derbyshire
+E01019559,Chesterfield 008C,E07000034,Chesterfield,10727,Derbyshire
+E01019560,Chesterfield 008D,E07000034,Chesterfield,10728,Derbyshire
+E01019561,Chesterfield 008E,E07000034,Chesterfield,10729,Derbyshire
+E01019562,Chesterfield 008F,E07000034,Chesterfield,10730,Derbyshire
+E01019563,Chesterfield 002A,E07000034,Chesterfield,10731,Derbyshire
+E01019564,Chesterfield 002B,E07000034,Chesterfield,10732,Derbyshire
+E01019565,Chesterfield 002C,E07000034,Chesterfield,10733,Derbyshire
+E01019566,Chesterfield 002D,E07000034,Chesterfield,10734,Derbyshire
+E01019567,Chesterfield 006E,E07000034,Chesterfield,10735,Derbyshire
+E01019568,Chesterfield 002E,E07000034,Chesterfield,10736,Derbyshire
+E01019569,Chesterfield 007B,E07000034,Chesterfield,10737,Derbyshire
+E01019570,Chesterfield 007C,E07000034,Chesterfield,10738,Derbyshire
+E01019571,Chesterfield 004E,E07000034,Chesterfield,10739,Derbyshire
+E01019572,Chesterfield 001C,E07000034,Chesterfield,10740,Derbyshire
+E01019573,Chesterfield 001D,E07000034,Chesterfield,10741,Derbyshire
+E01019574,Chesterfield 001E,E07000034,Chesterfield,10742,Derbyshire
+E01019575,Chesterfield 013A,E07000034,Chesterfield,10743,Derbyshire
+E01019576,Chesterfield 013B,E07000034,Chesterfield,10744,Derbyshire
+E01019577,Chesterfield 013C,E07000034,Chesterfield,10745,Derbyshire
+E01019578,Chesterfield 013D,E07000034,Chesterfield,10746,Derbyshire
+E01019579,Chesterfield 010D,E07000034,Chesterfield,10747,Derbyshire
+E01019580,Chesterfield 007D,E07000034,Chesterfield,10748,Derbyshire
+E01019581,Chesterfield 007E,E07000034,Chesterfield,10749,Derbyshire
+E01019582,Chesterfield 012E,E07000034,Chesterfield,10750,Derbyshire
+E01019583,Chesterfield 012F,E07000034,Chesterfield,10751,Derbyshire
+E01019585,Chesterfield 012G,E07000034,Chesterfield,10752,Derbyshire
+E01019586,Chesterfield 011A,E07000034,Chesterfield,10753,Derbyshire
+E01019587,Chesterfield 011B,E07000034,Chesterfield,10754,Derbyshire
+E01019588,Chesterfield 011C,E07000034,Chesterfield,10755,Derbyshire
+E01033387,Chesterfield 010F,E07000034,Chesterfield,10756,Derbyshire
+E01033388,Chesterfield 010G,E07000034,Chesterfield,10757,Derbyshire
+E01019594,Derbyshire Dales 009A,E07000035,Derbyshire Dales,10758,Derbyshire
+E01019595,Derbyshire Dales 008A,E07000035,Derbyshire Dales,10759,Derbyshire
+E01019596,Derbyshire Dales 009B,E07000035,Derbyshire Dales,10760,Derbyshire
+E01019597,Derbyshire Dales 009C,E07000035,Derbyshire Dales,10761,Derbyshire
+E01019598,Derbyshire Dales 009D,E07000035,Derbyshire Dales,10762,Derbyshire
+E01019599,Derbyshire Dales 011B,E07000035,Derbyshire Dales,10763,Derbyshire
+E01019600,Derbyshire Dales 002A,E07000035,Derbyshire Dales,10764,Derbyshire
+E01019601,Derbyshire Dales 011A,E07000035,Derbyshire Dales,10765,Derbyshire
+E01019602,Derbyshire Dales 001A,E07000035,Derbyshire Dales,10766,Derbyshire
+E01019603,Derbyshire Dales 010A,E07000035,Derbyshire Dales,10767,Derbyshire
+E01019604,Derbyshire Dales 002B,E07000035,Derbyshire Dales,10768,Derbyshire
+E01019605,Derbyshire Dales 008B,E07000035,Derbyshire Dales,10769,Derbyshire
+E01019606,Derbyshire Dales 002C,E07000035,Derbyshire Dales,10770,Derbyshire
+E01019607,Derbyshire Dales 010B,E07000035,Derbyshire Dales,10771,Derbyshire
+E01019608,Derbyshire Dales 011G,E07000035,Derbyshire Dales,10772,Derbyshire
+E01019609,Derbyshire Dales 005A,E07000035,Derbyshire Dales,10773,Derbyshire
+E01019610,Derbyshire Dales 011D,E07000035,Derbyshire Dales,10774,Derbyshire
+E01019611,Derbyshire Dales 008C,E07000035,Derbyshire Dales,10775,Derbyshire
+E01019612,Derbyshire Dales 010C,E07000035,Derbyshire Dales,10776,Derbyshire
+E01019613,Derbyshire Dales 011C,E07000035,Derbyshire Dales,10777,Derbyshire
+E01019614,Derbyshire Dales 001B,E07000035,Derbyshire Dales,10778,Derbyshire
+E01019615,Derbyshire Dales 001C,E07000035,Derbyshire Dales,10779,Derbyshire
+E01019616,Derbyshire Dales 008D,E07000035,Derbyshire Dales,10780,Derbyshire
+E01019617,Derbyshire Dales 011F,E07000035,Derbyshire Dales,10781,Derbyshire
+E01019618,Derbyshire Dales 002D,E07000035,Derbyshire Dales,10782,Derbyshire
+E01019619,Derbyshire Dales 006A,E07000035,Derbyshire Dales,10783,Derbyshire
+E01019620,Derbyshire Dales 006B,E07000035,Derbyshire Dales,10784,Derbyshire
+E01019621,Derbyshire Dales 005B,E07000035,Derbyshire Dales,10785,Derbyshire
+E01019622,Derbyshire Dales 005C,E07000035,Derbyshire Dales,10786,Derbyshire
+E01019623,Derbyshire Dales 006C,E07000035,Derbyshire Dales,10787,Derbyshire
+E01019624,Derbyshire Dales 005D,E07000035,Derbyshire Dales,10788,Derbyshire
+E01019625,Derbyshire Dales 006D,E07000035,Derbyshire Dales,10789,Derbyshire
+E01019626,Derbyshire Dales 006E,E07000035,Derbyshire Dales,10790,Derbyshire
+E01019627,Derbyshire Dales 005E,E07000035,Derbyshire Dales,10791,Derbyshire
+E01019628,Derbyshire Dales 005F,E07000035,Derbyshire Dales,10792,Derbyshire
+E01019629,Derbyshire Dales 010D,E07000035,Derbyshire Dales,10793,Derbyshire
+E01019630,Derbyshire Dales 011E,E07000035,Derbyshire Dales,10794,Derbyshire
+E01019631,Derbyshire Dales 001D,E07000035,Derbyshire Dales,10795,Derbyshire
+E01019632,Derbyshire Dales 006F,E07000035,Derbyshire Dales,10796,Derbyshire
+E01019633,Derbyshire Dales 007A,E07000035,Derbyshire Dales,10797,Derbyshire
+E01019634,Derbyshire Dales 007B,E07000035,Derbyshire Dales,10798,Derbyshire
+E01019635,Derbyshire Dales 007C,E07000035,Derbyshire Dales,10799,Derbyshire
+E01019636,Derbyshire Dales 007D,E07000035,Derbyshire Dales,10800,Derbyshire
