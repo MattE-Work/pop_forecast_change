@@ -399,7 +399,32 @@ with tabs[2]:
     
 #tab 4 - demand now and future
 with tabs[3]:
-    st.write('to update with the modelling demand using user-chosen method')
+    st.header('Demand considerations')
+
+    #derive metrics
+    sum_baseline_need = df_inflated_lsoa_level_pop['Baseline Need'].sum()
+    sum_forecast_need = df_inflated_lsoa_level_pop['Forecast Need'].sum()
+    overall_percent_change = (sum_forecast_need - sum_baseline_need) / sum_baseline_need
+    
+    if debug_mode == 'Yes':
+        st.write(sum_baseline_need)
+        st.write(sum_forecast_need)
+        st.write(overall_percent_change)
+
+    st.subheader('Proportion of baseline need presenting to service as demand')
+    st.write(f'The service sees {round(((total_activity_number/sum_baseline_need)*100),2)}% of the modelled baseline need.')
+    
+    st.subheader('Future demand')
+    forecast_demand = total_activity_number + (total_activity_number * overall_percent_change)
+
+    st.write(f"""Assuming this % remains constant, based on population change 
+    and any change to the prevalence rate, future demand in {pop_proj_forecast_year} of 
+    {round(forecast_demand,2)}""")
+
+    st.write(f'This presents a change of :red[**{round(forecast_demand - total_activity_number),0}**]')
+
+    #baseline_demand_as_proporton_of_need = total_activity_number
+    #baseline_demand_as_proporton_of_need = total_activity_number / 
     #map_baseline_pop = map_func.render_folium_map_heatmap(gdf_merged, count_column='Baseline Population', line_weight=1, color_scheme='YlOrRd', title=f'{pop_proj_baseline_year} population', LSOA_column='LSOA21CD', scale=scale)
     
     
