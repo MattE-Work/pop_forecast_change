@@ -2,3 +2,7 @@ pandas
 streamlit
 streamlit-folium
 altair
+geopandas
+folium
+streamlit_folium
+branca
