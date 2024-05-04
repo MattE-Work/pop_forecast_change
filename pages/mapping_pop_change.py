@@ -9,6 +9,7 @@ from streamlit_folium import st_folium
 #import modules
 from pages.page_functions import pop_data_ETL_functions as pop_ETL
 from pages.page_functions import map_functions as map_func
+from pages.page_functions import file_upload_warnings as warn
 
 #set page config
 st.set_page_config(layout="wide")
@@ -17,23 +18,23 @@ st.set_page_config(layout="wide")
 #Title
 #----------------------------
 st.title(':green[Mapping Population Forecast Change]🗺️')
-debug_mode = st.radio(label='turn on debug mode', options=['Yes', 'No'], index=1, horizontal=True)
+debug_mode = st.radio(label='turn on debug mode', options=['Yes', 'No'], index=1, horizontal=True, help='Turning this on will display the tables that are produced when the model runs. The formatting of these is not great, it has largely been included to aid with putting this together, but kept in case you want to visualise the method being applied.')
 #----------------------------
 #Overview of functionality (summary) - signpost to menu to review the method 
 #and assumptions that are being made in the model
 #----------------------------
-st.header(':red[Read me first!] :grey[***(Ts and Cs)***] 👨🏻‍⚖️👩🏻‍⚖️')
+st.header(':red[Read this👇🏻first!]👨🏻‍⚖️')
 
-with st.expander(label='Click for overview of data sources'):
+with st.expander(label='**:red[Click for overview of this page]**'):
     #license and data sources
     license_url = 'https://github.com/MattE-Work/pop_forecast_change/blob/main/LICENSE'
     license_html = f'<a href="{license_url}" target="_blank">License terms.</a>'
     
-    st.header('License terms:')
+    st.subheader('License terms:')
     st.write('This resource is provided under an MIT license. It is your responsibility to familiarise yourself with and abide by the terms of this license, via the link below:')
     st.markdown(license_html, unsafe_allow_html=True)
     
-    st.header('Reference data sources:')
+    st.subheader('Reference data sources:')
     st.write('The reference data used in this app is all publicy available from the below sources (links working as of May 2024).')
     
     ons_lsoa_syoa_sex_url = 'https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/lowersuperoutputareamidyearpopulationestimates'
@@ -50,13 +51,15 @@ with st.expander(label='Click for overview of data sources'):
     st.markdown(lsoa_imd_open_communities_html, unsafe_allow_html=True)
     st.markdown(nomis_html, unsafe_allow_html=True)
 
-    st.header('Methods:')
-    st.write('The method used varies depending whether the user has baseline and future prevalence rates or not.')
-    st.subheader('Prevalence rates known/provided:')
-    st.write('TODO')
-    
-    st.subheader('Prevalence rates not known:')
-    st.write('TODO')
+    st.subheader('Method overview:')
+    st.write("""
+        \n1 - The baseline population for each individual age in the age range, gender, and baseline year is retrieved at LSOA level. 
+        \n2 - The baseline and forecast population for the specified populatoin is retrieved at the selected higher level geography (district / UTLA)
+        \n3 - The net and percentage change is derived at the higher level geography and for each individual age range in the range for each area in the selected geography/ies
+        \n4 - Because forecast population data is not available at LSOA level, the model applies the higher level percentage change by age range to all LSOAs that fall within that higher level geography (assumes all LSOA population change is consistent within the given area)
+        \n5 - The net change at LSOA level is derived, this is used in the map of population change.
+        \n6 - The baseline and forecast prevalence rate are applied to the relevant population, the net change between the two is then derived.
+    """)
 
 
 
@@ -128,7 +131,7 @@ with st.expander('Click to view / set required parameters'):
     geography_level = st.selectbox(
         'Select the level of geography to map', 
         options=['Upper Tier or Unitary Authority', 'District Authority or Place'], 
-        index=0)
+        index=1)
 
     #done
     if geography_level == 'Upper Tier or Unitary Authority':
@@ -190,7 +193,9 @@ with st.expander('Click to view / set required parameters'):
         pop_proj_baseline_year = st.selectbox(
             label='Select baseline year', 
             options=options_years_with_default,
-            index=1, disabled=True)
+            index=1, 
+            #disabled=True
+            )
     #future forecast year for population estimate
     with col2:
         remaining_options = pop_ETL.get_remaining_years(options_years_with_default, pop_proj_baseline_year)
@@ -237,15 +242,13 @@ with st.expander('Click to view / set required parameters'):
     
     #if selected load data, render render file upload option
     elif how_to_enter_baseline_demand == baseline_demand_upload_lsoa_aggregate_counts:
-        st.subheader(':red[Warning!]⚠️')
-        st.write(""":red[It is **your** responsibility to ensure the file you use 
-        contains **only** aggregate counts of activity per LSOA, and no other data. 
-        In choosing this option you are confirming you are doing so in accordance 
-        with your organisation's Information Governance policies and all legal duties. 
-        An example illustrating the required structure / content of the file is 
-        provided below for your reference.]""")
+        warn.render_warning_lsoa_count_for_map()
 
-        df_path = st.file_uploader(label='Select the file containing only aggregate counts per LSOA')
+        df_path = st.file_uploader(label='Select the file containing **only** aggregate counts per LSOA')
+        if df_path == None and debug_mode == 'No':
+            st.stop()
+        else:
+            df_users_activity_per_lsoa = pd.read_csv(df_path)
 
     #st.subheader(':green[Select outputs to produce]')
     #col1, col2 = st.columns(2)
@@ -309,13 +312,13 @@ df_inflated_lsoa_level_pop = pop_ETL.apply_percent_changes_iteratively(df_lsoa_s
 #-------------------------------
 
 if debug_mode == 'Yes':
-    st.write('Susbet baseline pop by single year of age and district selections')
+    st.header('Susbet baseline pop by single year of age and district selections')
     st.write(df_lsoa_syoa_selected_age_range.head())
     st.write('source forecast df for single year of age, selected geography, available genders')
     st.write(df_forecast_pop_all_years.head())
     st.write('sum pop change at the selected geography, gender, and age range')
     st.write(df_summed_pop_change)
-    st.write('pop change at the selected geography, gender, for each individual age in the chosen age range')
+    st.header('pop change at the selected geography, gender, for each individual age in the chosen age range')
     st.write(df_individual_ages_pop_change)
     #st.write('aggregated up the above df, to sum pop for each year of age by each geography in scope')
     #st.write(df_aggregated_change_by_year_of_age)
@@ -418,11 +421,11 @@ with tabs[3]:
     forecast_demand = total_activity_number + (total_activity_number * overall_percent_change)
 
     st.write(f"""Assuming this % remains constant, based on population change 
-    and any change to the prevalence rate, future demand in {pop_proj_forecast_year} of 
+    and any change to the prevalence rate, future demand in {pop_proj_forecast_year} could be in the order of 
     {round(forecast_demand,2)}""")
 
-    st.write(f'This presents a change of :red[**{round(forecast_demand - total_activity_number),0}**]')
-
+    st.write(f'This presents a change of :red[**{round((forecast_demand - total_activity_number),0)}**]')
+    
     #baseline_demand_as_proporton_of_need = total_activity_number
     #baseline_demand_as_proporton_of_need = total_activity_number / 
     #map_baseline_pop = map_func.render_folium_map_heatmap(gdf_merged, count_column='Baseline Population', line_weight=1, color_scheme='YlOrRd', title=f'{pop_proj_baseline_year} population', LSOA_column='LSOA21CD', scale=scale)

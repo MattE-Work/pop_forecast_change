@@ -175,6 +175,9 @@ def calculate_population_changes(service_df, pop_df, baseline_year, forecast_yea
 
         # Calculate net change and percent change
         net_change = forecast_population - baseline_population
+        
+        #st.write(f'baseline pop: {baseline_population} | forecast pop: {forecast_population}')
+
         percent_change = (net_change / baseline_population * 100) if baseline_population else 0
 
         # Calculate the forecasted demand by applying the percentage change to the attendances
@@ -379,7 +382,7 @@ def apply_percent_changes_iteratively(df_lsoa_level, df_higher_level_pop_change,
     lsoa_counts_df.rename(columns={'LSOA 2021 Code': 'LSOA21CD'}, inplace=True)
     
     #calculate the net pop change
-    difference = lsoa_counts_df['Baseline Population'] - lsoa_counts_df['Forecast Population']
+    difference = lsoa_counts_df['Forecast Population'] - lsoa_counts_df['Baseline Population']
     
     #insert the net pop change into the df
     lsoa_counts_df.insert(3, 'Net Pop Change', difference)
