@@ -92,7 +92,7 @@ prevalence_use = 'Use crude prevalence rates'
 apply_population_change = 'Apply population change to current demand'
 
 #list options for baseline demand setting
-baseline_demand_apportion_total_activity = 'Enter a total activity figure and apportion to all LSOAs'
+baseline_demand_apportion_total_activity = 'Enter a total activity figure'
 baseline_demand_upload_lsoa_aggregate_counts = 'Upload a file of agregated activity counts by LSOA'
 
 #POP FORECASTS
@@ -238,7 +238,9 @@ with st.expander('Click to view / set required parameters'):
     #enter activity total to apportion to all LSOAs based on pop size per LSOA
     # NOTE: this approach cannot be accurate, render warnings in read me and when produced !!
     if how_to_enter_baseline_demand == baseline_demand_apportion_total_activity:
-        total_activity_number = st.number_input(label='Enter the demand number for the service/condition you are modelling:')
+        total_activity_number = st.number_input(
+            label='Enter the demand number for the service/condition you are modelling:',
+            help='This could be the unique number of patients referred in a year (regardless whether this resulted in an attendance), if you wanted to consider "expressed need", for example.')
     
     #if selected load data, render render file upload option
     elif how_to_enter_baseline_demand == baseline_demand_upload_lsoa_aggregate_counts:
@@ -247,33 +249,45 @@ with st.expander('Click to view / set required parameters'):
         df_path = st.file_uploader(label='Select the file containing **only** aggregate counts per LSOA')
         if df_path == None and debug_mode == 'No':
             st.stop()
-        else:
+        elif df_path != None and debug_mode == 'No':
             df_users_activity_per_lsoa = pd.read_csv(df_path)
+            
+            col1, col2 = st.columns(2)
+            with col1:
+                lsoa_col = st.selectbox(label='Select the LSOA 2021 Code column', options=df_users_activity_per_lsoa.columns)
+            with col2:
+                activity_count_col = st.selectbox(label='Select the column containing activity counts', options=df_users_activity_per_lsoa.columns)
+                total_activity_number = df_users_activity_per_lsoa[activity_count_col].sum()
 
-    #st.subheader(':green[Select outputs to produce]')
-    #col1, col2 = st.columns(2)
-    #with col1:
-    #    list_type_of_outputs = st.multiselect(label='Select the type of outputs you want to produce', options=['Maps', 'Charts'])
-    #with col2:
-    #    list_possible_outputs = []
-    #    if 'Maps' in list_type_of_outputs:
-    #        list_possible_outputs += ['Map - deprivation (IMD)', 'Map - population change']
-    #    if 'Charts' in list_type_of_outputs:
-    #        list_possible_outputs += ['Population change chart', 'Modelled demand change']
-    #    list_outputs = st.multiselect(label='Select the outputs to produce', options=list_possible_outputs)
+        elif df_path == None and debug_mode == 'Yes':
+            st.write('Dummy data in use')
 
-button_confirm_params = st.button(label='Confirm parameters')
-if not button_confirm_params:
-    st.stop()
-else:
-    pass
+    st.subheader(':green[Select outputs to produce]')
+    col1, col2 = st.columns(2)
+    with col1:
+        list_type_of_outputs = st.multiselect(label='Select the type of outputs you want to produce', options=['Maps', 'Charts'])
+    with col2:
+        list_possible_outputs = []
+        if 'Maps' in list_type_of_outputs:
+            list_possible_outputs += ['Map - Deprivation (IMD)', 'Map - Population Change', 'Map - Estimated Need Change']
+            if how_to_enter_baseline_demand == baseline_demand_upload_lsoa_aggregate_counts:
+                list_possible_outputs+=['Map - Current demand vs Need']
+        if 'Charts' in list_type_of_outputs:
+            list_possible_outputs += ['Chart - Population Change', 'Chart - Modelled Demand Change']
+        list_outputs = st.multiselect(label='Select the outputs to produce', options=list_possible_outputs)
+
+#button_confirm_params = st.button(label='Confirm parameters')
+#if not button_confirm_params:
+#    st.stop()
+#else:
+#    pass
+
 
 #Use the parameters to derive the required datasets
-st.header(':green[Population change in selected areas:]')
-
-df_lsoa_syoa_selected_age_range = pop_ETL.load_and_process_baseline_data(pop_proj_gender, geography_level, list_of_areas_to_forecast, pop_proj_min_age, pop_proj_max_age)
-
-
+try:
+    df_lsoa_syoa_selected_age_range = pop_ETL.load_and_process_baseline_data(pop_proj_gender, geography_level, list_of_areas_to_forecast, pop_proj_min_age, pop_proj_max_age)
+except:
+    st.stop()
 
 #function call to derive the total pop in the age / gender of interest
 df_summed_pop_change = pop_ETL.forecast_population(
@@ -285,7 +299,6 @@ df_summed_pop_change = pop_ETL.forecast_population(
         pop_proj_forecast_year,
         pop_proj_gender
         )
-
 
 
 #calculate the population change percentage for the chosen geography, age, gender, timeframes
@@ -347,10 +360,11 @@ else:
     pass
 
 
-
-
 #merge in IMD decile to ensure this is in the geodf (next line)
 df_inflated_lsoa_level_pop = pop_ETL.merge_imd_decile(df_inflated_lsoa_level_pop, df_lsoa_imd_decile)
+
+#convert imd deciles to quintiles
+df_inflated_lsoa_level_pop = map_func.convert_deciles_to_quintiles(df_inflated_lsoa_level_pop, 'IMD Decile')
 
 # Merge the GeoDataFrame with the count data DataFrame
 gdf_merged = geodf_lsoa_boundaries.merge(df_inflated_lsoa_level_pop, on='LSOA21CD', how='inner')
@@ -378,53 +392,202 @@ gdf_merged = geodf_lsoa_boundaries.merge(df_inflated_lsoa_level_pop, on='LSOA21C
 #prep
 #derive centroid of the selected districts, *should* ensure the maps are rendered centrally in the folium plots
 
+#----------------------------------------
 
-tabs = st.tabs(['Deprivation (IMD)', 'Map of population change', 'Map of estimated need change', 'Modelled demand change'])
+# Rendering selected outputs in tabs
+if list_outputs:
+    st.header(':green[Outputs:]')
+    tabs = st.tabs([output.split(" - ")[1] for output in list_outputs])
+    for i, tab in enumerate(tabs):
+        with tab:
+            #map_func.render_output(list_outputs[i])
+            if list_outputs[i] == 'Map - Deprivation (IMD)':
+                st.subheader('Map of deprivation (IMD)')
+                st.write("""The below map shows deprivation quintiles, with areas more 
+                deprived shaded in red, and areas less deprived shaded in green.""")
+                imd_decile_map = map_func.render_folium_map_heatmap(gdf_merged, count_column='IMD Quintile', line_weight=1, color_scheme='RdYlGn', title='', LSOA_column = 'LSOA21CD')
+            
+            elif list_outputs[i] == 'Map - Population Change':
+                st.subheader(f'Map of Population Change ({pop_proj_gender}, aged {pop_proj_min_age}-{pop_proj_max_age})')
+                st.write('The below map shows modelled population change in the demographic of interest. Population decreases are shaded :blue[**blue**] and population increases are shaded :red[**red**].')
+                map = map_func.render_folium_map_heatmap_net_change(gdf_merged, 'Net Pop Change', line_weight=1, title='')
+            
+            elif list_outputs[i] == 'Map - Estimated Need Change':
+                st.subheader(f'Map of Estimated Change in Need ({pop_proj_gender}, aged {pop_proj_min_age}-{pop_proj_max_age})')
+                st.write('The below map shows modelled change in need, using the user entered prevalence rates, and applying these to the estimated future population. Decreases are shaded :blue[blue] and increases are shaded :red[red].')
+                map = map_func.render_folium_map_heatmap_net_change(gdf_merged, 'Net Need Change', line_weight=1, title='')
+            
+            elif list_outputs[i] == 'Chart - Population Change':
+                st.write('This section still needs to be built.')
+            
+            elif list_outputs[i] == 'Map - Current demand vs Need':
+                st.subheader(f'Map of Baseline Estimated Need Seen ({pop_proj_gender}, aged {pop_proj_min_age}-{pop_proj_max_age})')
+                st.write("""The below map shows the difference between estimated 
+                need at LSOA level and the volume of demand presenting to the 
+                service. 
+                \nValues in :blue[**blue**] indicate areas where expressed need is 
+                greater than anticipated need. Conversely, areas in :red[**red**] 
+                indicate areas where the volume of activity seen is less than 
+                the level of estimated need in that area, based on the entered prevalence rate.""")
+                
+                user_df = df_users_activity_per_lsoa[[lsoa_col, activity_count_col]]
+                gdf_subset_baseline_met_need = gdf_merged[['LSOA21CD', 'geometry', 'Baseline Need']]
+
+                # Merge the GeoDataFrame with the DataFrame
+                gdf_subset_baseline_met_need = gdf_subset_baseline_met_need.merge(user_df, on=lsoa_col, how='left')
+
+                # Fill missing Activity_Count values with 0
+                gdf_subset_baseline_met_need[activity_count_col] = gdf_subset_baseline_met_need[activity_count_col].fillna(0)
+
+                # Calculate 'Baseline Met Need'
+                gdf_subset_baseline_met_need['Baseline Met Need'] = gdf_subset_baseline_met_need['Baseline Need'] - gdf_subset_baseline_met_need[activity_count_col]
+
+                #st.write(gdf_subset_baseline_met_need.head())
+                map = map_func.render_folium_map_heatmap_net_change(gdf_subset_baseline_met_need, 'Baseline Met Need', line_weight=1, title='')
+
+            elif list_outputs[i] == 'Chart - Modelled Demand Change':
+                st.header('Demand considerations')
+
+                #derive metrics
+                sum_baseline_need = df_inflated_lsoa_level_pop['Baseline Need'].sum()
+                sum_forecast_need = df_inflated_lsoa_level_pop['Forecast Need'].sum()
+                overall_percent_change = (sum_forecast_need - sum_baseline_need) / sum_baseline_need
+                
+                if debug_mode == 'Yes':
+                    st.write(sum_baseline_need)
+                    st.write(sum_forecast_need)
+                    st.write(overall_percent_change)
+
+                st.subheader('Proportion of baseline need presenting as demand')
+                st.write(f'The service sees {round(((total_activity_number/sum_baseline_need)*100),2)}% of the modelled baseline need.')
+                
+                st.subheader('Future demand')
+                forecast_demand = total_activity_number + (total_activity_number * overall_percent_change)
+
+                st.write(f"""Assuming this % remains constant, based on population change 
+                and any change to the prevalence rate, future demand in {pop_proj_forecast_year} could be in the order of 
+                {round(forecast_demand,2)}. This represents a change of :red[**{round((forecast_demand - total_activity_number),0)}**]""")
+
+                #st.write(f'This presents a change of :red[**{round((forecast_demand - total_activity_number),0)}**]')
+                
+                #balance number to adjusted when changing modifiers
+                forecast_demand_modified = round((forecast_demand - total_activity_number),0)
+                forecast_demand_baseline = round((forecast_demand - total_activity_number),0)
+
+                
+                st.header('Demand Modifier Considerations')
+                
+                st.write('The below is intended to aid planning, by considering system 4 considerations for modifying future demand increases (where applicable / possible).')
+                col1, col2, col3 = st.columns(3)
+                with col1: 
+                    #Technology
+                    tech_modified_slider = st.slider(label='Technology', min_value=-100, max_value=100, value=0)
+                    #Environmental
+                    environmental_modified_slider = st.slider(label='Environmental', min_value=-100, max_value=100, value=0)
+                    #Economic
+                    economic_modified_slider = st.slider(label='Economic', min_value=-100, max_value=100, value=0)
+            
+                with col2:
+                    #Social
+                    social_modified_slider = st.slider(label='Social', min_value=-100, max_value=100, value=0)
+                    #Political
+                    political_modified_slider = st.slider(label='Political', min_value=-100, max_value=100, value=0)
+                    #Educational
+                    educational_modified_slider = st.slider(label='Educational', min_value=-100, max_value=100, value=0)
+
+                with col3:
+                    #Ecological
+                    ecological_modified_slider = st.slider(label='Ecological', min_value=-100, max_value=100, value=0)
+                    #Commercial
+                    commercial_modified_slider = st.slider(label='Commercial', min_value=-100, max_value=100, value=0)
+                    #Legal
+                    legal_modified_slider = st.slider(label='Legal', min_value=-100, max_value=100, value=0)
+                
+                list_modifiers = [
+                    tech_modified_slider,
+                    environmental_modified_slider,
+                    economic_modified_slider,
+                    social_modified_slider,
+                    political_modified_slider,
+                    educational_modified_slider,
+                    ecological_modified_slider,
+                    commercial_modified_slider,
+                    legal_modified_slider,
+                ]
+
+                net_reduction_value = sum([(modifier / 100) * forecast_demand_baseline for modifier in list_modifiers])
+                forecast_demand_modified += net_reduction_value
+                
+                col1, col2 = st.columns(2)
+                with col1:
+                    st.subheader('Modified demand net increase:')
+                with col2:
+                    if forecast_demand_modified > 0:
+                        st.subheader(f":red[{round(forecast_demand_modified,0)}]")
+                    else:
+                        st.subheader(f":green[{round(forecast_demand_modified,0)}]")
+
+                #Technology
+                #Environmental
+                #Economic
+                #Social
+                #Political
+                #Educational
+                #Ecological
+                #Commercial
+                #Demograpghic #Excluded, as this is the purpose of the tool. 
+                #Legal
+
+
+#----------------------------------------
+
+#tabs = st.tabs(['Deprivation (IMD)', 'Map of population change', 'Map of estimated need change', 'Modelled demand change'])
 
 #tab 1 - deprivation 
-with tabs[0]:
-    #Map 1: IMD by LSOA (as is) - static map renders on load?
-    st.subheader('Map of deprivation (IMD)')
-    st.write('The below map shows deprivation deciles, with areas more deprived shaded in red, and areas less deprived shaded in green.')
-    imd_decile_map = map_func.render_folium_map_heatmap(gdf_merged, count_column='IMD Decile', line_weight=1, color_scheme='RdYlGn', title='', LSOA_column = 'LSOA21CD')
-
-#tab 2 - population net change map
-with tabs[1]:
-    st.subheader(f'Map of Population Change ({pop_proj_gender}, aged {pop_proj_min_age}-{pop_proj_max_age})')
-    st.write('The below map shows modelled population change in the demographic of interest. Population decreases are shaded :blue[blue] and population increases are shaded :red[red].')
-    map = map_func.render_folium_map_heatmap_net_change(gdf_merged, 'Net Pop Change', line_weight=1, title='')
-
-#tab 3 - estimated need chart (renders net change)
-with tabs[2]:
-    st.subheader(f'Map of Estimated Change in Need ({pop_proj_gender}, aged {pop_proj_min_age}-{pop_proj_max_age})')
-    st.write('The below map shows modelled change in need, using the user entered prevalence rates, and applying these to the estimated future population. Decreases are shaded :blue[blue] and increases are shaded :red[red].')
-    map = map_func.render_folium_map_heatmap_net_change(gdf_merged, 'Net Need Change', line_weight=1, title='')
-    
-#tab 4 - demand now and future
-with tabs[3]:
-    st.header('Demand considerations')
-
-    #derive metrics
-    sum_baseline_need = df_inflated_lsoa_level_pop['Baseline Need'].sum()
-    sum_forecast_need = df_inflated_lsoa_level_pop['Forecast Need'].sum()
-    overall_percent_change = (sum_forecast_need - sum_baseline_need) / sum_baseline_need
-    
-    if debug_mode == 'Yes':
-        st.write(sum_baseline_need)
-        st.write(sum_forecast_need)
-        st.write(overall_percent_change)
-
-    st.subheader('Proportion of baseline need presenting to service as demand')
-    st.write(f'The service sees {round(((total_activity_number/sum_baseline_need)*100),2)}% of the modelled baseline need.')
-    
-    st.subheader('Future demand')
-    forecast_demand = total_activity_number + (total_activity_number * overall_percent_change)
-
-    st.write(f"""Assuming this % remains constant, based on population change 
-    and any change to the prevalence rate, future demand in {pop_proj_forecast_year} could be in the order of 
-    {round(forecast_demand,2)}""")
-
-    st.write(f'This presents a change of :red[**{round((forecast_demand - total_activity_number),0)}**]')
+#with tabs[0]:
+#    #Map 1: IMD by LSOA (as is) - static map renders on load?
+#    st.subheader('Map of deprivation (IMD)')
+#    st.write('The below map shows deprivation quintiles, with areas more deprived shaded in red, and areas less deprived shaded in green.')
+#    #imd_decile_map = map_func.render_folium_map_heatmap(gdf_merged, count_column='IMD Quintile', line_weight=1, color_scheme='RdYlGn', title='', LSOA_column = 'LSOA21CD')
+#    imd_decile_map = map_func.render_folium_map_heatmap(gdf_merged, count_column='IMD Quintile', line_weight=1, color_scheme='RdYlGn', title='', LSOA_column = 'LSOA21CD')
+#
+##tab 2 - population net change map
+#with tabs[1]:
+#    st.subheader(f'Map of Population Change ({pop_proj_gender}, aged {pop_proj_min_age}-{pop_proj_max_age})')
+#    st.write('The below map shows modelled population change in the demographic of interest. Population decreases are shaded :blue[blue] and population increases are shaded :red[red].')
+#    map = map_func.render_folium_map_heatmap_net_change(gdf_merged, 'Net Pop Change', line_weight=1, title='')
+#
+##tab 3 - estimated need chart (renders net change)
+#with tabs[2]:
+#    st.subheader(f'Map of Estimated Change in Need ({pop_proj_gender}, aged {pop_proj_min_age}-{pop_proj_max_age})')
+#    st.write('The below map shows modelled change in need, using the user entered prevalence rates, and applying these to the estimated future population. Decreases are shaded :blue[blue] and increases are shaded :red[red].')
+#    map = map_func.render_folium_map_heatmap_net_change(gdf_merged, 'Net Need Change', line_weight=1, title='')
+#    
+##tab 4 - demand now and future
+#with tabs[3]:
+#    st.header('Demand considerations')
+#
+#    #derive metrics
+#    sum_baseline_need = df_inflated_lsoa_level_pop['Baseline Need'].sum()
+#    sum_forecast_need = df_inflated_lsoa_level_pop['Forecast Need'].sum()
+#    overall_percent_change = (sum_forecast_need - sum_baseline_need) / sum_baseline_need
+#    
+#    if debug_mode == 'Yes':
+#        st.write(sum_baseline_need)
+#        st.write(sum_forecast_need)
+#        st.write(overall_percent_change)
+#
+#    st.subheader('Proportion of baseline need presenting to service as demand')
+#    st.write(f'The service sees {round(((total_activity_number/sum_baseline_need)*100),2)}% of the modelled baseline need.')
+#    
+#    st.subheader('Future demand')
+#    forecast_demand = total_activity_number + (total_activity_number * overall_percent_change)
+#
+#    st.write(f"""Assuming this % remains constant, based on population change 
+#    and any change to the prevalence rate, future demand in {pop_proj_forecast_year} could be in the order of 
+#    {round(forecast_demand,2)}""")
+#
+#    st.write(f'This presents a change of :red[**{round((forecast_demand - total_activity_number),0)}**]')
     
     #baseline_demand_as_proporton_of_need = total_activity_number
     #baseline_demand_as_proporton_of_need = total_activity_number / 
