@@ -625,7 +625,7 @@ if list_outputs:
                     social_modified_slider,
                     political_modified_slider,
                     educational_modified_slider,
-                    ecological_modified_slider,
+                    #ecological_modified_slider,
                     commercial_modified_slider,
                     legal_modified_slider,
                 ]
