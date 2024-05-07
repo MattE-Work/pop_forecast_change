@@ -78,6 +78,56 @@ def render_folium_map(gdf, line_weight=1):
     return m
 
 #----------------------------------------------
+
+def create_color_scale(gdf, column_name):
+    """
+    Create a fixed color scale for IMD quintiles ranging from 1 to 5, handling None values.
+
+    Parameters:
+    gdf (GeoDataFrame): GeoDataFrame containing the IMD data.
+    column_name (str): Column name containing the IMD quintile data.
+
+    Returns:
+    branca.colormap.LinearColormap: Configured color scale.
+    """
+    # Ensure all data is valid and between 1 to 5
+    valid_data = gdf.dropna(subset=[column_name])
+    valid_data = valid_data[valid_data[column_name].between(1, 5)]
+
+    # Define colors corresponding to IMD quintiles from 1 to 5
+    colors = ['red', 'orange', 'yellow', 'lightgreen', 'darkgreen']
+    # Quintile breaks (ensure this matches your data exactly)
+    quintiles = [1, 2, 3, 4, 5]
+
+    # Create a color scale with discrete colors and breaks
+    #color_scale = branca.colormap.LinearColormap(
+    #    colors=colors,
+    #    vmin=min(quintiles),
+    #    vmax=max(quintiles),
+    #    index=quintiles,
+    #    caption='IMD Quintile'
+    #)
+    color_scale = branca.colormap.LinearColormap(
+        colors=colors,
+        vmin=1,
+        vmax=5,
+        index=[1,2,3,4,5],
+        caption='IMD Quintile'
+    )
+    
+    # Customize the appearance
+    color_scale.style = {
+        'font-size': '10px',
+        'font-family': 'Arial',
+        'box-shadow': '2px 2px 2px lightgrey',
+        'border-radius': '5px',
+        'position': 'bottomright'
+    }
+
+    return color_scale
+
+#----------------------------------------------
+
 def create_diverging_color_scale(gdf, net_change_column):
     max_value = gdf[net_change_column].max()
     min_value = gdf[net_change_column].min()
@@ -200,35 +250,57 @@ def render_folium_map_heatmap(gdf, count_column=None, line_weight=1, color_schem
     # Set the CRS of the GeoDataFrame to EPSG 4326 (WGS 84) for Folium compatibility
     gdf = gdf.to_crs(epsg=4326) #testing handling outside of the function
 
+    # Remove entries with None values in the count_column to prevent errors
+    gdf = gdf.dropna(subset=[count_column])
+
+    # Create a color scale specifically for IMD quintiles
+    color_scale = create_color_scale(gdf, count_column)
+
     # Create a Folium map centered at the mean of the GeoDataFrame geometries
     m = folium.Map(location=[gdf.geometry.centroid.y.mean(), gdf.geometry.centroid.x.mean()], zoom_start=8.5) #higher number zooms in, lower number zooms out
 
     # Add OpenStreetMap tiles as the background (base layer)
     folium.TileLayer('openstreetmap').add_to(m)
 
-    # Add GeoDataFrame geometries to the map with specified line weight
-    folium.GeoJson(gdf, style_function=lambda feature: {
-        'color': 'blue',  # Border color
-        'weight': line_weight,  # Line weight
-    },
-    tooltip=folium.features.GeoJsonTooltip(fields=[LSOA_column, count_column],
-    aliases=['LSOA Code', 'Count'],
-    labels=True)
+    ## Add GeoDataFrame geometries to the map with specified line weight
+    #folium.GeoJson(gdf, style_function=lambda feature: {
+    #    'color': 'blue',  # Border color
+    #    'weight': line_weight,  # Line weight
+    #},
+    #tooltip=folium.features.GeoJsonTooltip(fields=[LSOA_column, count_column],
+    #aliases=['LSOA Code', 'Count'],
+    #labels=True)
+    #).add_to(m)
+
+    folium.GeoJson(
+        gdf,
+        style_function=lambda feature: {
+            'fillColor': color_scale(feature['properties'][count_column]),
+            'color': 'black',
+            'weight': line_weight,
+            'fillOpacity': 0.5,
+        },
+        tooltip=folium.features.GeoJsonTooltip(fields=[LSOA_column, count_column],
+                                               aliases=['LSOA Code', 'IMD Quintile'],
+                                               labels=True)
     ).add_to(m)
 
     # Render choropleth map if count column is provided
-    if count_column is not None:
-        # Add choropleth layer
-        folium.Choropleth(
-            geo_data=gdf,
-            data=gdf,
-            columns=[gdf.index, count_column],
-            key_on='feature.id',
-            fill_color=color_scheme,  # Adjust color scheme
-            fill_opacity=0.7,
-            line_opacity=0.2,
-            legend_name='Count'
-        ).add_to(m)
+    #if count_column is not None:
+    #    # Add choropleth layer
+    #    folium.Choropleth(
+    #        geo_data=gdf,
+    #        data=gdf,
+    #        columns=[gdf.index, count_column],
+    #        key_on='feature.id',
+    #        fill_color=color_scheme,  # Adjust color scheme
+    #        fill_opacity=0.7,
+    #        line_opacity=0.2,
+    #        legend_name='Count'
+    #    ).add_to(m)
+    
+    # Add the color scale legend
+    color_scale.add_to(m)
 
     # Render the map in Streamlit using streamlit_folium
     #folium_static(m)#, width=400, height=750)
@@ -238,7 +310,7 @@ def render_folium_map_heatmap(gdf, count_column=None, line_weight=1, color_schem
 
 
 #----------------------------------------------
-
+@st.cache_data(ttl=1800)
 def calculate_age_sum(df, min_age, max_age, lsoa_code_column):
     """
     Calculate the sum of columns between the specified age range for each row in the DataFrame.
@@ -339,6 +411,7 @@ def get_remaining_years(options, selected_year):
 #----------------------------------------------
 
 # Function to filter DataFrame based on user-provided arguments
+@st.cache_data(ttl=1800)
 def filter_dataframe_pop_projections(geography_level, dict_files, locations, start_year, end_year, gender, age_range):
     if geography_level == 'Upper Tier or Unitary Authority':
         df = dict_files['pop_projections']['pop_proj_utla']
@@ -400,6 +473,7 @@ def visualize_population_change(df):
 #----------------------------------------------
 
 # Function to filter DataFrame based on user-provided arguments
+@st.cache_data(ttl=1800)
 def filter_dataframe(data_dict, locations, start_year, end_year, gender, age_range):
     df = data_dict['df']
     
@@ -490,12 +564,39 @@ def create_data_files(
     return dict_files 
 
 #----------------------------------------------
+@st.cache_data(ttl=1800)
+def convert_deciles_to_quintiles(df, imd_decile_col):
+    """
+    Convert decile values to quintile values, retaining rows with None in 'IMD Decile'.
+    
+    Parameters:
+    df (pd.DataFrame): DataFrame containing an 'IMD Decile' column with decile values.
 
+    Returns:
+    pd.DataFrame: Updated DataFrame with quintile values, including original None values.
+    """
+    # Create a new column for the quintiles
+    # Using a lambda function to convert only non-None values
+    quintiles  = df[imd_decile_col].apply(lambda x: ((x - 1) // 2) + 1 if pd.notnull(x) else None)
+
+    # Find the index of the IMD Decile column
+    decile_col_index = df.columns.get_loc(imd_decile_col)
+
+    # Insert the quintile values right after the IMD Decile column
+    df.insert(loc=decile_col_index + 1, column='IMD Quintile', value=quintiles)
+
+    return df
 
 
 
 #----------------------------------------------
+
+
+
 #----------------------------------------------
+
+
+
 #----------------------------------------------
 #----------------------------------------------
 #----------------------------------------------
