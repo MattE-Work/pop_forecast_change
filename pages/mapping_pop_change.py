@@ -233,7 +233,9 @@ with st.expander('Click to view / set required parameters'):
     #how to model future demand - either applying population change, or, prevalence rates
     how_to_enter_baseline_demand = st.selectbox(
         label='How do you want to enter baseline demand?',
-        options=[default_option, baseline_demand_apportion_total_activity, baseline_demand_upload_lsoa_aggregate_counts])
+        options=[default_option, baseline_demand_apportion_total_activity, baseline_demand_upload_lsoa_aggregate_counts],
+        index=1,disabled=True
+        )
 
     #enter activity total to apportion to all LSOAs based on pop size per LSOA
     # NOTE: this approach cannot be accurate, render warnings in read me and when produced !!

@@ -331,7 +331,11 @@ st.subheader('How do you want to use this tool?')
 
 #col1, col2 = st.columns(2)
 #with col1:
-use_case = st.selectbox(label='Select how you want to use this tool:', options=['For just one service', 'For many services (requires file upload)'])
+use_case = st.selectbox(
+    label='Select how you want to use this tool:', 
+    options=['For just one service', 'For many services (requires file upload)'],
+    index=0,disabled=True
+    )
 
 #--------------------------------------------------------------
 
