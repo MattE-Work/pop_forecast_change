@@ -483,27 +483,140 @@ if list_outputs:
                 col1, col2, col3 = st.columns(3)
                 with col1: 
                     #Technology
-                    tech_modified_slider = st.slider(label='Technology', min_value=-100, max_value=100, value=0)
+                    tech_modified_slider = st.slider(
+                        label='Technology', 
+                        min_value=-100, 
+                        max_value=100, 
+                        value=0,
+                        help="""Technology is a significant external factor affecting 
+                        organisations and their plans and strategies. 
+                        Technological developments and advancements can provide 
+                        significant opportunities, together with some risks. New 
+                        technology could impact operations, travel and logistics, 
+                        communication, staffing or administrative elements of a 
+                        service. As technology develops and improves, you may be 
+                        able to become more efficient, cut costs or streamline 
+                        processes. Technological change can also impact service 
+                        users' expectations and demand""")
                     #Environmental
-                    environmental_modified_slider = st.slider(label='Environmental', min_value=-100, max_value=100, value=0)
+                    environmental_modified_slider = st.slider(
+                        label='Environmental', 
+                        min_value=-100, 
+                        max_value=100, 
+                        value=0,
+                        help="""There are numerous environmental factors to 
+                        consider when operating an organisation. You need to 
+                        consider waste disposal, recycling, energy consumption 
+                        and pollution levels (carbon emissions). Environmental 
+                        concerns can differ significantly depending on your service. 
+                        One service may need to consider the levels of harmful 
+                        waste they produce, whereas another may need to consider 
+                        the environmental impact of staff travel. As environmental 
+                        laws and regulations change and adapt to the climate 
+                        crisis, the environmental factor may grow in importance. 
+                        """)
                     #Economic
-                    economic_modified_slider = st.slider(label='Economic', min_value=-100, max_value=100, value=0)
+                    economic_modified_slider = st.slider(
+                        label='Economic', 
+                        min_value=-100, 
+                        max_value=100, 
+                        value=0,
+                        help="""External economic factors can have a profound 
+                        effect on an organisation and its future strategy. 
+                        External economic factors could include fluctuations in 
+                        inflation, unemployment or changes to government policy. 
+                        Global economic influences could also play a role, such 
+                        as supply issues connected to global shortages, conflict 
+                        or environmental factors. 
+                        """)
             
                 with col2:
                     #Social
-                    social_modified_slider = st.slider(label='Social', min_value=-100, max_value=100, value=0)
+                    social_modified_slider = st.slider(
+                        label='Social', 
+                        min_value=-100, 
+                        max_value=100, 
+                        value=0,
+                        help="""Elements related to the cultural and trends in 
+                        attitude of a target demographic or group. Social factors 
+                        such as age, religion, level of education and value 
+                        systems can impact decisions. Understanding the social 
+                        element is necessary to help ensure your service is 
+                        targeted and operates appropriately. Decisions on how to 
+                        communicate, where to deliver and how to deliver your service 
+                        are all important considerations that the social factor could 
+                        influence. Any long-term shifts or changes in the social 
+                        elements of your target demographic or group could have a 
+                        significant impact on your decisions for a service. """)
+
                     #Political
-                    political_modified_slider = st.slider(label='Political', min_value=-100, max_value=100, value=0)
+                    political_modified_slider = st.slider(
+                        label='Political', 
+                        min_value=-100, 
+                        max_value=100, 
+                        value=0,
+                        help="""The political landscape is constantly changing, 
+                        and considering the current political issues makes a big 
+                        difference to organisations. Political changes can 
+                        influence anything from budget levels to employment 
+                        law, levels of demand and workplace regulations. 
+                        Keeping abreast of political developments and predicting 
+                        the likely impact of future developments on services 
+                        can help towards planning and updating strategies for 
+                        the upcoming political landscape.""")
+
                     #Educational
-                    educational_modified_slider = st.slider(label='Educational', min_value=-100, max_value=100, value=0)
+                    educational_modified_slider = st.slider(
+                        label='Educational', 
+                        min_value=-100, 
+                        max_value=100, 
+                        value=0,
+                        help="""As with legal factors, educational factors are 
+                        linked to political factors, with changes often dependent 
+                        on the current government.  The economic factors can also 
+                        have an influence on educational factors.  The workforce 
+                        supply can be influenced greatly by the level of education 
+                        and types of courses available.  High-demand skills can 
+                        reduce workforce availability.  If educational placements 
+                        are not available for those skills, availability could 
+                        be reduced even more and put pressure on wage rises.  
+                        This factor can also determine whether the required 
+                        workforce is available locally and/or whether you need 
+                        to consider in house developments for some skills as 
+                        well as how and where to recruit.""")
 
                 with col3:
                     #Ecological
-                    ecological_modified_slider = st.slider(label='Ecological', min_value=-100, max_value=100, value=0)
+                    #ecological_modified_slider = st.slider(
+                    #    label='Ecological', 
+                    #    min_value=-100, 
+                    #    max_value=100, 
+                    #    value=0,
+                    #    help=)
+                    
                     #Commercial
-                    commercial_modified_slider = st.slider(label='Commercial', min_value=-100, max_value=100, value=0)
+                    commercial_modified_slider = st.slider(
+                        label='Commercial', 
+                        min_value=-100, 
+                        max_value=100, 
+                        value=0,
+                        help="""Commercial factors relate to how changes in the 
+                        marketplace may affect how the organisation operates.  
+                        These factors could determine 
+                        users' ability or willingness to access services and so 
+                        affect service uptake and outcomes.""")
                     #Legal
-                    legal_modified_slider = st.slider(label='Legal', min_value=-100, max_value=100, value=0)
+                    legal_modified_slider = st.slider(
+                        label='Legal', 
+                        min_value=-100, 
+                        max_value=100, 
+                        value=0,
+                        help="""Legal factors are intrinsically linked to 
+                        political factors, and changes in the law may depend on 
+                        the political climate and policy agenda of the current 
+                        government. Changes to law could impact supplies, 
+                        imports and exports, quality standards and regulations, 
+                        employment and working conditions.""")
                 
                 list_modifiers = [
                     tech_modified_slider,
@@ -529,16 +642,7 @@ if list_outputs:
                     else:
                         st.subheader(f":green[{round(forecast_demand_modified,0)}]")
 
-                #Technology
-                #Environmental
-                #Economic
-                #Social
-                #Political
-                #Educational
-                #Ecological
-                #Commercial
-                #Demograpghic #Excluded, as this is the purpose of the tool. 
-                #Legal
+               
 
 
 #----------------------------------------
