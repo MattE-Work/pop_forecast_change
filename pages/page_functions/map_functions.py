@@ -310,7 +310,7 @@ def render_folium_map_heatmap(gdf, count_column=None, line_weight=1, color_schem
 
 
 #----------------------------------------------
-@st.cache_data(ttl=1800)
+#@st.cache_data(ttl=1800)
 def calculate_age_sum(df, min_age, max_age, lsoa_code_column):
     """
     Calculate the sum of columns between the specified age range for each row in the DataFrame.
@@ -411,7 +411,7 @@ def get_remaining_years(options, selected_year):
 #----------------------------------------------
 
 # Function to filter DataFrame based on user-provided arguments
-@st.cache_data(ttl=1800)
+#@st.cache_data(ttl=1800)
 def filter_dataframe_pop_projections(geography_level, dict_files, locations, start_year, end_year, gender, age_range):
     if geography_level == 'Upper Tier or Unitary Authority':
         df = dict_files['pop_projections']['pop_proj_utla']
@@ -473,7 +473,7 @@ def visualize_population_change(df):
 #----------------------------------------------
 
 # Function to filter DataFrame based on user-provided arguments
-@st.cache_data(ttl=1800)
+#@st.cache_data(ttl=1800)
 def filter_dataframe(data_dict, locations, start_year, end_year, gender, age_range):
     df = data_dict['df']
     
@@ -498,7 +498,7 @@ def filter_dataframe(data_dict, locations, start_year, end_year, gender, age_ran
     return df
 #----------------------------------------------
 
-@st.cache_data
+#@st.cache_data
 def create_data_files(
     lookup_imd_decile,
     loookup_imd_decile_detailed,
@@ -564,7 +564,7 @@ def create_data_files(
     return dict_files 
 
 #----------------------------------------------
-@st.cache_data(ttl=1800)
+#@st.cache_data(ttl=1800)
 def convert_deciles_to_quintiles(df, imd_decile_col):
     """
     Convert decile values to quintile values, retaining rows with None in 'IMD Decile'.
