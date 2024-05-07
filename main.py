@@ -26,11 +26,10 @@ into a single, usable format, to help planning for potential future population c
 st.write('Please review the expanders below for more information.')
 
 with st.expander(':violet[**Purpose**]'):
-    with st.container(border=True):
-        #st.subheader('Purpose:')
-        st.write("""This app has been built to combine several publicly available 
-        data sources with the intention of aiding understanding of anticipated population 
-        change over time.""")
+    #st.subheader('Purpose:')
+    st.write("""This app has been built to combine several publicly available 
+    data sources with the intention of aiding understanding of anticipated population 
+    change over time.""")
 with st.expander(':violet[**How to use this app**]'):
     #st.subheader('How to use this app:')
     st.write("""Use the menu to the left 👈🏻 to access the different pages. Each 
